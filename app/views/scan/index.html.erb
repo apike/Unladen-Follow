@@ -1,0 +1,11 @@
+<h1><%= image_tag "heaviest_headline.png" %></h1>
+
+<div id='results'>
+    <span id='progress'></span>
+    <%= image_tag "loader.gif", :id => "loader" %>
+</div>
+
+
+<script>
+    Unladen.get_tweets();
+</script>

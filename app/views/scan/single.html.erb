@@ -1,0 +1,30 @@
+<% @user = strip_tags @user %>
+
+<h2>Tweet Load for <%= @user %></h2>
+
+<div id='results'>
+    <div id='tlu'><%= image_tag "loader.gif", :id => "loader" %></div>
+
+    <div style='float: right; text-align: right'>
+     <img id='avatar' src=''><br>
+     <a id='link' href='#'></a>
+    </div>
+
+    <table id='single_results'>
+        <tr><td><%= image_tag "icons/count.png" %></td><td>Quantity</td><td id='volume'>-</td></tr>
+        <tr><td><%= image_tag "icons/hashes.png" %></td><td>Hashtags</td><td id='hashes'>-</td></tr>
+        <tr><td><%= image_tag "icons/links.png" %></td><td>Links</td><td id='links'>-</td></tr>
+        <tr><td><%= image_tag "icons/mentions.png" %></td><td>Mentions</td><td id='mentions'>-</td></tr>
+        <tr><td><%= image_tag "icons/meta.png" %></td><td>Metadiscussion</td><td id='meta'>-</td></tr>
+    </table>
+    
+    <p id='weeks'><br></p>
+</div>
+
+<br><br>
+
+<%= render :partial => 'layouts/choices' %>
+
+<script>
+    Unladen.get_user("<%= @user %>");
+</script>

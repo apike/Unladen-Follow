@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <title>Unladen Follow - Twitter analyzer and unfollow helper</title>
+  <%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.js" %>
+  <%= javascript_include_tag "application.js" %>
+  <meta name="viewport" content="width=550, user-scalable=yes">
+  <%= stylesheet_link_tag("unladen") %>
+</head>
+<body>
+
+<div id='spacing'>
+<div id='page'>
+
+    <div id='header'>
+        <a href='/'><%= image_tag "unladen_logo.png" %></a>
+    </div>
+
+    <div id='content'>
+        <%= yield  %>
+    </div>
+
+    <div id='footer'>
+
+    <a href='/about/'>Learn More</a> - <a href='/scan/'>Analyze</a><br>
+    Brought to you by <a href='http://www.twitter.com/apike/'>@apike</a> of <a href='http://www.antipode.ca/'>Antipode</a>.
+    </div>
+
+</div>
+</div>
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-585700-3");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+
+</body>
+</html>
