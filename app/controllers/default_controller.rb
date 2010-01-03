@@ -23,6 +23,11 @@ class DefaultController < ApplicationController
     redirect_to @request_token.authorize_url
   end
   
+  def logout
+    session[:request_token] = nil
+    session[:request_secret] = nil
+  end
+  
   def oauth
     require 'oauth'
     consumer = get_consumer

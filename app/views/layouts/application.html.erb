@@ -25,7 +25,10 @@
 
     <div id='footer'>
 
-    <a href='/about/'>Learn More</a> - <a href='/scan/'>Analyze</a><br>
+    <a href='/about/'>Learn More</a>.
+    <% if (session[:oauth_token]) %>
+        &nbsp; <a href='/default/logout/'>Log Out</a>.
+    <% end %><br>
     Brought to you by <a href='http://www.twitter.com/apike/'>@apike</a> of <a href='http://www.antipode.ca/'>Antipode</a>.
     </div>
 

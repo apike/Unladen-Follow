@@ -38,6 +38,8 @@ var Unladen = {
         "Volumetrizing"
     ],
     
+    SCOBLE_TLU: 446,
+    
     // Class variables
     used_messages: {},
     simulated_users: {},
@@ -46,6 +48,7 @@ var Unladen = {
     start_time: new Date(),
     current_page: 1,
     initial_weeks_of_data: null,
+    single_mode: false,
     
     // Return false if we've taken too long or have all the data
     should_keep_going: function() {
@@ -220,9 +223,11 @@ var Unladen = {
     
     display_single: function(user, weeks_of_data) {
         $('#tlu').html(this.r10(user["score"]));
-        $('#avatar').attr("src", user["image"]);
-        $('#link').attr("href", "http://www.twitter.com/" + user["name"]);
-        $('#link').html(user["real_name"] || user["name"]);
+        $('#link').attr("href", "");
+        
+        var link_url = 'http://www.twitter.com/' +  + user["name"];
+        var link_text = (user["real_name"] || user["name"]) + "'s Twitter profile";
+        $('#link').html("<a href='" + link_url + "'>" + link_text + "</a>.");
 
         $("#volume").html(this.r10(user["count"]));
         $("#hashes").html(this.r10(user["hashes"]));
@@ -231,13 +236,15 @@ var Unladen = {
         $("#meta").html(this.r10(user["meta"]));
 
         $('#weeks').html("Derived from <b>" + this.r10(weeks_of_data) + "</b> weeks of tweets.");
+        
+        $('#' + this.beaufort_scale(user["score"])).addClass("on");
     },
     
     display_full_table: function(user_array, total_cost) {
         var html = [];
 
         html.push('You are laden with <b>' + Math.round(total_cost) + '</b> Tweet Load Units per week.<br>\
-        This is equivalent to following Robert Scoble <b>' + Math.round(total_cost / 250) + '</b> times.<br>\
+        This is equivalent to following Robert Scoble <b>' + Unladen.r10(total_cost / this.SCOBLE_TLU) + '</b> times.<br>\
         <a href="/about/">Learn more about Unladen Follow</a>.<br>\
         \
         <form id="simulate_form" onsubmit="return Unladen.go_simulate();">\
@@ -286,8 +293,8 @@ var Unladen = {
         }
         
         html.push('</table>\
-            Table derived from <b>' + this.r10(this.initial_weeks_of_data) + '</b> weeks of data.<br>\
-            For more accuracy, unfollow some and run again.');
+            Numbers estimated from <b>' + this.r10(this.initial_weeks_of_data) + '</b> weeks of data.<br>\
+            For more accuracy, unfollow some and run again, or click through to a user\'s detail page.');
         
         this.display_output(html.join(''));
     },
@@ -340,7 +347,9 @@ var Unladen = {
     
     load_error: function(status) {
         var error_msg = '';
-        if (status == 401) {
+        if (status == 401 && this.single_mode) {
+            error_msg = "This user's tweets are private.";
+        } else if (status == 401) {
             error_msg = "You are not authenticated. <a href='/default/login/'>Please authorize with Twitter here</a>.";
         } else if (status == -1) {
             error_msg = "No tweets found. If you follow anybody, this means Twitter is having issues.";
@@ -354,7 +363,10 @@ var Unladen = {
         var error_message = '';
         if (status == 401) {
             error_message = "User is private.";
-        } else if (status == -1) {
+        } else if (status == 404) {
+            error_message = "There is no such user.";
+        }
+        else if (status == -1) {
             error_message = "No tweets.";
         } else {
             error_message = "Twitter error #" + status + ".";
@@ -371,12 +383,31 @@ var Unladen = {
         return false; // Stop form from going
     },
     
+    go_single: function(user) {
+        this.single_mode = true;
+        this.get_user(user);
+    },
+    
     user_jump: function() {
         // Jump from homepage to a user
 
         window.location = "/u/" + $("#jumpto").val();
 
         return false;
+    },
+    
+    beaufort_scale: function(tlu) {
+        if (tlu < 10 ) {
+            return "breeze";
+        } else if (tlu < 25) {
+            return "wind";
+        } else if (tlu < 50) {
+            return "gale";
+        } else if (tlu < 100) {
+            return "storm";
+        } else {
+            return "hurricane";
+        }
     }
     
 };

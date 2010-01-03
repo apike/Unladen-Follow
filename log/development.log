@@ -38095,3 +38095,1714 @@ Processing ScanController#user (for 127.0.0.1 at 2010-01-02 01:30:27) [GET]
   Session ID: fe16c6be99285f5baea50f645ee3b8a8
   Parameters: {"u"=>"al3x"}
 Completed in 1012ms (View: 0, DB: 0) | 200 OK [http://localhost/scan/user/?u=al3x]
+
+
+Processing ScanController#index (for 127.0.0.1 at 2010-01-02 18:48:19) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+Rendering template within layouts/application
+Rendering scan/index
+Completed in 59ms (View: 57, DB: 7) | 200 OK [http://localhost/scan/]
+
+
+Processing ScanController#followed (for 127.0.0.1 at 2010-01-02 18:48:20) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+  Parameters: {"page"=>"1"}
+Completed in 124ms (View: 0, DB: 0) | 200 OK [http://localhost/scan/followed/?page=1]
+
+
+Processing DefaultController#login (for 127.0.0.1 at 2010-01-02 18:48:24) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+Redirected to http://twitter.com/oauth/authorize?oauth_token=EDX9t5ripfmaW2K8yFpg9IL8sCMczl5KJOi7tgGhsdI
+Completed in 130ms (DB: 0) | 302 Found [http://localhost/default/login/]
+
+
+Processing DefaultController#index (for 127.0.0.1 at 2010-01-02 18:48:33) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+Rendering template within layouts/application
+Rendering default/index
+Rendered layouts/_choices (0.4ms)
+Completed in 98ms (View: 97, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ScanController#single (for 127.0.0.1 at 2010-01-02 18:49:26) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+  Parameters: {"id"=>"apike"}
+Rendering template within layouts/application
+Rendering scan/single
+Rendered layouts/_choices (0.3ms)
+Completed in 20ms (View: 19, DB: 1) | 200 OK [http://localhost/u/apike]
+
+
+Processing ScanController#single (for 127.0.0.1 at 2010-01-02 18:49:26) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+  Parameters: {"id"=>"apike"}
+Rendering template within layouts/application
+Rendering scan/single
+Rendered layouts/_choices (0.3ms)
+Completed in 8ms (View: 7, DB: 0) | 200 OK [http://localhost/u/apike]
+
+
+Processing ScanController#user (for 127.0.0.1 at 2010-01-02 18:49:26) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+  Parameters: {"u"=>"apike"}
+Completed in 4038ms (View: 0, DB: 0) | 200 OK [http://localhost/scan/user/?u=apike]
+
+
+Processing ScanController#single (for 127.0.0.1 at 2010-01-02 18:58:31) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+  Parameters: {"id"=>"apike"}
+Rendering template within layouts/application
+Rendering scan/single
+Rendered layouts/_choices (0.3ms)
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://localhost/u/apike]
+
+
+Processing ScanController#user (for 127.0.0.1 at 2010-01-02 18:58:32) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+  Parameters: {"u"=>"apike"}
+Completed in 1340ms (View: 0, DB: 0) | 200 OK [http://localhost/scan/user/?u=apike]
+
+
+Processing ScanController#single (for 127.0.0.1 at 2010-01-02 18:58:33) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+  Parameters: {"id"=>"apike"}
+Rendering template within layouts/application
+Rendering scan/single
+Rendered layouts/_choices (0.3ms)
+Completed in 8ms (View: 6, DB: 0) | 200 OK [http://localhost/u/apike]
+
+
+Processing ScanController#single (for 127.0.0.1 at 2010-01-02 18:59:10) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+  Parameters: {"id"=>"apike"}
+Rendering template within layouts/application
+Rendering scan/single
+Rendered layouts/_choices (0.2ms)
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://localhost/u/apike]
+
+
+Processing ScanController#user (for 127.0.0.1 at 2010-01-02 18:59:10) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+  Parameters: {"u"=>"apike"}
+Completed in 1059ms (View: 0, DB: 0) | 200 OK [http://localhost/scan/user/?u=apike]
+
+
+Processing ScanController#single (for 127.0.0.1 at 2010-01-02 18:59:11) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+  Parameters: {"id"=>"apike"}
+Rendering template within layouts/application
+Rendering scan/single
+Rendered layouts/_choices (0.3ms)
+Completed in 8ms (View: 7, DB: 0) | 200 OK [http://localhost/u/apike]
+
+
+Processing ScanController#single (for 127.0.0.1 at 2010-01-02 19:01:24) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+  Parameters: {"id"=>"apike"}
+Rendering template within layouts/application
+Rendering scan/single
+Rendered layouts/_choices (0.2ms)
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://localhost/u/apike]
+
+
+Processing ScanController#user (for 127.0.0.1 at 2010-01-02 19:01:24) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+  Parameters: {"u"=>"apike"}
+Completed in 1358ms (View: 0, DB: 0) | 200 OK [http://localhost/scan/user/?u=apike]
+
+
+Processing ScanController#single (for 127.0.0.1 at 2010-01-02 19:01:26) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+  Parameters: {"id"=>"apike"}
+Rendering template within layouts/application
+Rendering scan/single
+Rendered layouts/_choices (0.2ms)
+Completed in 8ms (View: 7, DB: 0) | 200 OK [http://localhost/u/apike]
+
+
+Processing ScanController#single (for 127.0.0.1 at 2010-01-02 19:02:16) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+  Parameters: {"id"=>"apike"}
+Rendering template within layouts/application
+Rendering scan/single
+Rendered layouts/_choices (0.2ms)
+Completed in 6ms (View: 5, DB: 1) | 200 OK [http://localhost/u/apike]
+
+
+Processing ScanController#user (for 127.0.0.1 at 2010-01-02 19:02:16) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+  Parameters: {"u"=>"apike"}
+Completed in 999ms (View: 0, DB: 1) | 200 OK [http://localhost/scan/user/?u=apike]
+
+
+Processing ScanController#single (for 127.0.0.1 at 2010-01-02 19:02:17) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+  Parameters: {"id"=>"apike"}
+Rendering template within layouts/application
+Rendering scan/single
+Rendered layouts/_choices (0.3ms)
+Completed in 8ms (View: 7, DB: 0) | 200 OK [http://localhost/u/apike]
+
+
+Processing ScanController#single (for 127.0.0.1 at 2010-01-02 19:02:20) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+  Parameters: {"id"=>"apike"}
+Rendering template within layouts/application
+Rendering scan/single
+Rendered layouts/_choices (0.2ms)
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://localhost/u/apike]
+
+
+Processing ScanController#user (for 127.0.0.1 at 2010-01-02 19:02:21) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+  Parameters: {"u"=>"apike"}
+Completed in 1149ms (View: 0, DB: 1) | 200 OK [http://localhost/scan/user/?u=apike]
+
+
+Processing ScanController#single (for 127.0.0.1 at 2010-01-02 19:02:22) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+  Parameters: {"id"=>"apike"}
+Rendering template within layouts/application
+Rendering scan/single
+Rendered layouts/_choices (0.5ms)
+Completed in 8ms (View: 7, DB: 1) | 200 OK [http://localhost/u/apike]
+
+
+Processing ScanController#single (for 127.0.0.1 at 2010-01-02 19:02:34) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+  Parameters: {"id"=>"apike"}
+Rendering template within layouts/application
+Rendering scan/single
+Rendered layouts/_choices (0.2ms)
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://localhost/u/apike]
+
+
+Processing ScanController#user (for 127.0.0.1 at 2010-01-02 19:02:34) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+  Parameters: {"u"=>"apike"}
+Completed in 2315ms (View: 0, DB: 0) | 200 OK [http://localhost/scan/user/?u=apike]
+
+
+Processing ScanController#single (for 127.0.0.1 at 2010-01-02 19:02:37) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+  Parameters: {"id"=>"apike"}
+Rendering template within layouts/application
+Rendering scan/single
+Rendered layouts/_choices (0.3ms)
+Completed in 9ms (View: 8, DB: 0) | 200 OK [http://localhost/u/apike]
+
+
+Processing ScanController#single (for 127.0.0.1 at 2010-01-02 19:02:56) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+  Parameters: {"id"=>"apike"}
+Rendering template within layouts/application
+Rendering scan/single
+Rendered layouts/_choices (0.2ms)
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://localhost/u/apike]
+
+
+Processing ScanController#user (for 127.0.0.1 at 2010-01-02 19:02:56) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+  Parameters: {"u"=>"apike"}
+Completed in 1551ms (View: 0, DB: 1) | 200 OK [http://localhost/scan/user/?u=apike]
+
+
+Processing ScanController#single (for 127.0.0.1 at 2010-01-02 19:02:57) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+  Parameters: {"id"=>"apike"}
+Rendering template within layouts/application
+Rendering scan/single
+Rendered layouts/_choices (0.2ms)
+Completed in 8ms (View: 7, DB: 0) | 200 OK [http://localhost/u/apike]
+
+
+Processing ScanController#single (for 127.0.0.1 at 2010-01-02 19:03:15) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+  Parameters: {"id"=>"apike"}
+Rendering template within layouts/application
+Rendering scan/single
+Rendered layouts/_choices (0.2ms)
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://localhost/u/apike]
+
+
+Processing ScanController#user (for 127.0.0.1 at 2010-01-02 19:03:15) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+  Parameters: {"u"=>"apike"}
+Completed in 1431ms (View: 0, DB: 2) | 200 OK [http://localhost/scan/user/?u=apike]
+
+
+Processing ScanController#single (for 127.0.0.1 at 2010-01-02 19:03:16) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+  Parameters: {"id"=>"apike"}
+Rendering template within layouts/application
+Rendering scan/single
+Rendered layouts/_choices (0.3ms)
+Completed in 8ms (View: 6, DB: 0) | 200 OK [http://localhost/u/apike]
+
+
+Processing ScanController#single (for 127.0.0.1 at 2010-01-02 19:03:54) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+  Parameters: {"id"=>"robotpony"}
+Rendering template within layouts/application
+Rendering scan/single
+Rendered layouts/_choices (0.2ms)
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://localhost/u/robotpony]
+
+
+Processing ScanController#user (for 127.0.0.1 at 2010-01-02 19:03:54) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+  Parameters: {"u"=>"robotpony"}
+Completed in 7081ms (View: 0, DB: 0) | 200 OK [http://localhost/scan/user/?u=robotpony]
+
+
+Processing ScanController#single (for 127.0.0.1 at 2010-01-02 19:04:01) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+  Parameters: {"id"=>"robotpony"}
+Rendering template within layouts/application
+Rendering scan/single
+Rendered layouts/_choices (0.2ms)
+Completed in 66ms (View: 65, DB: 0) | 200 OK [http://localhost/u/robotpony]
+
+
+Processing ScanController#index (for 127.0.0.1 at 2010-01-02 19:05:53) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+Rendering template within layouts/application
+Rendering scan/index
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/scan/]
+
+
+Processing ScanController#followed (for 127.0.0.1 at 2010-01-02 19:05:53) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+  Parameters: {"page"=>"1"}
+Completed in 1360ms (View: 0, DB: 0) | 200 OK [http://localhost/scan/followed/?page=1]
+
+
+Processing ScanController#single (for 127.0.0.1 at 2010-01-02 19:05:54) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+  Parameters: {"id"=>"robotpony"}
+Rendering template within layouts/application
+Rendering scan/single
+Rendered layouts/_choices (0.3ms)
+Completed in 7ms (View: 6, DB: 0) | 200 OK [http://localhost/u/robotpony]
+
+
+Processing ScanController#user (for 127.0.0.1 at 2010-01-02 19:05:54) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+  Parameters: {"u"=>"robotpony"}
+Completed in 1011ms (View: 0, DB: 1) | 200 OK [http://localhost/scan/user/?u=robotpony]
+
+
+Processing ScanController#single (for 127.0.0.1 at 2010-01-02 19:05:56) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+  Parameters: {"id"=>"robotpony"}
+Rendering template within layouts/application
+Rendering scan/single
+Rendered layouts/_choices (0.2ms)
+Completed in 8ms (View: 6, DB: 0) | 200 OK [http://localhost/u/robotpony]
+
+
+Processing ScanController#single (for 127.0.0.1 at 2010-01-02 19:06:02) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+  Parameters: {"id"=>"robotpony"}
+Rendering template within layouts/application
+Rendering scan/single
+Rendered layouts/_choices (0.2ms)
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://localhost/u/robotpony]
+
+
+Processing ScanController#user (for 127.0.0.1 at 2010-01-02 19:06:02) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+  Parameters: {"u"=>"robotpony"}
+Completed in 688ms (View: 0, DB: 0) | 200 OK [http://localhost/scan/user/?u=robotpony]
+
+
+Processing ScanController#single (for 127.0.0.1 at 2010-01-02 19:06:03) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+  Parameters: {"id"=>"robotpony"}
+Rendering template within layouts/application
+Rendering scan/single
+Rendered layouts/_choices (0.2ms)
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://localhost/u/robotpony]
+
+
+Processing ScanController#single (for 127.0.0.1 at 2010-01-02 19:06:29) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+  Parameters: {"id"=>"robotpony"}
+Rendering template within layouts/application
+Rendering scan/single
+Rendered layouts/_choices (0.2ms)
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://localhost/u/robotpony]
+
+
+Processing ScanController#user (for 127.0.0.1 at 2010-01-02 19:06:29) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+  Parameters: {"u"=>"robotpony"}
+Completed in 2286ms (View: 0, DB: 0) | 200 OK [http://localhost/scan/user/?u=robotpony]
+
+
+Processing ScanController#single (for 127.0.0.1 at 2010-01-02 19:06:31) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+  Parameters: {"id"=>"robotpony"}
+Rendering template within layouts/application
+Rendering scan/single
+Rendered layouts/_choices (0.6ms)
+Completed in 7ms (View: 6, DB: 1) | 200 OK [http://localhost/u/robotpony]
+
+
+Processing ScanController#single (for 127.0.0.1 at 2010-01-02 19:06:42) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+  Parameters: {"id"=>"apike"}
+Rendering template within layouts/application
+Rendering scan/single
+Rendered layouts/_choices (0.2ms)
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://localhost/u/apike]
+
+
+Processing ScanController#user (for 127.0.0.1 at 2010-01-02 19:06:42) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+  Parameters: {"u"=>"apike"}
+Completed in 4032ms (View: 0, DB: 1) | 200 OK [http://localhost/scan/user/?u=apike]
+
+
+Processing ScanController#single (for 127.0.0.1 at 2010-01-02 19:06:46) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+  Parameters: {"id"=>"apike"}
+Rendering template within layouts/application
+Rendering scan/single
+Rendered layouts/_choices (0.2ms)
+Completed in 7ms (View: 5, DB: 0) | 200 OK [http://localhost/u/apike]
+
+
+Processing ScanController#single (for 127.0.0.1 at 2010-01-02 19:06:53) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+  Parameters: {"id"=>"tewha"}
+Rendering template within layouts/application
+Rendering scan/single
+Rendered layouts/_choices (0.2ms)
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://localhost/u/tewha]
+
+
+Processing ScanController#single (for 127.0.0.1 at 2010-01-02 19:06:53) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+  Parameters: {"id"=>"tewha"}
+Rendering template within layouts/application
+Rendering scan/single
+Rendered layouts/_choices (0.2ms)
+Completed in 8ms (View: 7, DB: 0) | 200 OK [http://localhost/u/tewha]
+
+
+Processing ScanController#user (for 127.0.0.1 at 2010-01-02 19:06:53) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+  Parameters: {"u"=>"tewha"}
+Completed in 5719ms (View: 0, DB: 0) | 200 OK [http://localhost/scan/user/?u=tewha]
+
+
+Processing ScanController#single (for 127.0.0.1 at 2010-01-02 19:07:04) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+  Parameters: {"id"=>"codinghorror"}
+Rendering template within layouts/application
+Rendering scan/single
+Rendered layouts/_choices (0.2ms)
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://localhost/u/codinghorror]
+
+
+Processing ScanController#user (for 127.0.0.1 at 2010-01-02 19:07:04) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+  Parameters: {"u"=>"codinghorror"}
+Completed in 3377ms (View: 0, DB: 0) | 200 OK [http://localhost/scan/user/?u=codinghorror]
+
+
+Processing ScanController#single (for 127.0.0.1 at 2010-01-02 19:07:07) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+  Parameters: {"id"=>"codinghorror"}
+Rendering template within layouts/application
+Rendering scan/single
+Rendered layouts/_choices (0.2ms)
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://localhost/u/codinghorror]
+
+
+Processing ScanController#single (for 127.0.0.1 at 2010-01-02 19:07:13) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+  Parameters: {"id"=>"bmann"}
+Rendering template within layouts/application
+Rendering scan/single
+Rendered layouts/_choices (0.2ms)
+Completed in 60ms (View: 5, DB: 0) | 200 OK [http://localhost/u/bmann]
+
+
+Processing ScanController#single (for 127.0.0.1 at 2010-01-02 19:07:13) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+  Parameters: {"id"=>"bmann"}
+Rendering template within layouts/application
+Rendering scan/single
+Rendered layouts/_choices (0.4ms)
+Completed in 10ms (View: 9, DB: 0) | 200 OK [http://localhost/u/bmann]
+
+
+Processing ScanController#user (for 127.0.0.1 at 2010-01-02 19:07:13) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+  Parameters: {"u"=>"bmann"}
+Completed in 4803ms (View: 0, DB: 0) | 200 OK [http://localhost/scan/user/?u=bmann]
+
+
+Processing ScanController#single (for 127.0.0.1 at 2010-01-02 19:08:05) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+  Parameters: {"id"=>"soundbyter"}
+Rendering template within layouts/application
+Rendering scan/single
+Rendered layouts/_choices (0.2ms)
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://localhost/u/soundbyter]
+
+
+Processing ScanController#user (for 127.0.0.1 at 2010-01-02 19:08:06) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+  Parameters: {"u"=>"soundbyter"}
+Completed in 1903ms (View: 0, DB: 1) | 200 OK [http://localhost/scan/user/?u=soundbyter]
+
+
+Processing ScanController#single (for 127.0.0.1 at 2010-01-02 19:08:08) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+  Parameters: {"id"=>"soundbyter"}
+Rendering template within layouts/application
+Rendering scan/single
+Rendered layouts/_choices (0.2ms)
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://localhost/u/soundbyter]
+
+
+Processing ScanController#single (for 127.0.0.1 at 2010-01-02 19:08:17) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+  Parameters: {"id"=>"alkema"}
+Rendering template within layouts/application
+Rendering scan/single
+Rendered layouts/_choices (0.2ms)
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://localhost/u/alkema]
+
+
+Processing ScanController#single (for 127.0.0.1 at 2010-01-02 19:08:17) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+  Parameters: {"id"=>"alkema"}
+Rendering template within layouts/application
+Rendering scan/single
+Rendered layouts/_choices (0.3ms)
+Completed in 9ms (View: 7, DB: 0) | 200 OK [http://localhost/u/alkema]
+
+
+Processing ScanController#user (for 127.0.0.1 at 2010-01-02 19:08:17) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+  Parameters: {"u"=>"alkema"}
+Completed in 9536ms (View: 0, DB: 1) | 200 OK [http://localhost/scan/user/?u=alkema]
+
+
+Processing ScanController#single (for 127.0.0.1 at 2010-01-02 19:09:55) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+  Parameters: {"id"=>"alkema"}
+Rendering template within layouts/application
+Rendering scan/single
+Rendered layouts/_choices (0.2ms)
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://localhost/u/alkema]
+
+
+Processing ScanController#user (for 127.0.0.1 at 2010-01-02 19:09:55) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+  Parameters: {"u"=>"alkema"}
+Completed in 476ms (View: 0, DB: 0) | 200 OK [http://localhost/scan/user/?u=alkema]
+
+
+Processing ScanController#single (for 127.0.0.1 at 2010-01-02 19:09:55) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+  Parameters: {"id"=>"alkema"}
+Rendering template within layouts/application
+Rendering scan/single
+Rendered layouts/_choices (0.3ms)
+Completed in 7ms (View: 5, DB: 1) | 200 OK [http://localhost/u/alkema]
+
+
+Processing ScanController#single (for 127.0.0.1 at 2010-01-02 19:09:56) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+  Parameters: {"id"=>"alkema"}
+Rendering template within layouts/application
+Rendering scan/single
+Rendered layouts/_choices (0.2ms)
+Completed in 7ms (View: 5, DB: 0) | 200 OK [http://localhost/u/alkema]
+
+
+Processing ScanController#user (for 127.0.0.1 at 2010-01-02 19:09:56) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+  Parameters: {"u"=>"alkema"}
+Completed in 5174ms (View: 0, DB: 1) | 200 OK [http://localhost/scan/user/?u=alkema]
+
+
+Processing ScanController#single (for 127.0.0.1 at 2010-01-02 19:10:02) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+  Parameters: {"id"=>"alkema"}
+Rendering template within layouts/application
+Rendering scan/single
+Rendered layouts/_choices (0.2ms)
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://localhost/u/alkema]
+
+
+Processing ScanController#single (for 127.0.0.1 at 2010-01-02 19:10:04) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+  Parameters: {"id"=>"alkema"}
+Rendering template within layouts/application
+Rendering scan/single
+Rendered layouts/_choices (0.2ms)
+Completed in 7ms (View: 5, DB: 0) | 200 OK [http://localhost/u/alkema]
+
+
+Processing ScanController#user (for 127.0.0.1 at 2010-01-02 19:10:04) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+  Parameters: {"u"=>"alkema"}
+Completed in 914ms (View: 0, DB: 1) | 200 OK [http://localhost/scan/user/?u=alkema]
+
+
+Processing ScanController#single (for 127.0.0.1 at 2010-01-02 19:10:05) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+  Parameters: {"id"=>"alkema"}
+Rendering template within layouts/application
+Rendering scan/single
+Rendered layouts/_choices (0.2ms)
+Completed in 7ms (View: 6, DB: 0) | 200 OK [http://localhost/u/alkema]
+
+
+Processing ScanController#single (for 127.0.0.1 at 2010-01-02 19:11:07) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+  Parameters: {"id"=>"alkema"}
+Rendering template within layouts/application
+Rendering scan/single
+Rendered layouts/_choices (0.2ms)
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://localhost/u/alkema]
+
+
+Processing ScanController#single (for 127.0.0.1 at 2010-01-02 19:12:11) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+  Parameters: {"id"=>"alkema"}
+Rendering template within layouts/application
+Rendering scan/single
+Rendered layouts/_choices (0.2ms)
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://localhost/u/alkema]
+
+
+Processing ScanController#user (for 127.0.0.1 at 2010-01-02 19:12:11) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+  Parameters: {"u"=>"alkema"}
+Completed in 1485ms (View: 0, DB: 0) | 200 OK [http://localhost/scan/user/?u=alkema]
+
+
+Processing ScanController#single (for 127.0.0.1 at 2010-01-02 19:12:21) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+  Parameters: {"id"=>"alkema"}
+Rendering template within layouts/application
+Rendering scan/single
+Rendered layouts/_choices (0.2ms)
+Completed in 6ms (View: 5, DB: 1) | 200 OK [http://localhost/u/alkema]
+
+
+Processing ScanController#user (for 127.0.0.1 at 2010-01-02 19:12:21) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+  Parameters: {"u"=>"alkema"}
+Completed in 1182ms (View: 0, DB: 0) | 200 OK [http://localhost/scan/user/?u=alkema]
+
+
+Processing ScanController#single (for 127.0.0.1 at 2010-01-02 19:12:57) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+  Parameters: {"id"=>"alkema"}
+Rendering template within layouts/application
+Rendering scan/single
+Rendered layouts/_choices (0.2ms)
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://localhost/u/alkema]
+
+
+Processing ScanController#user (for 127.0.0.1 at 2010-01-02 19:12:57) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+  Parameters: {"u"=>"alkema"}
+Completed in 502ms (View: 0, DB: 0) | 200 OK [http://localhost/scan/user/?u=alkema]
+
+
+Processing ScanController#single (for 127.0.0.1 at 2010-01-02 19:13:08) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+  Parameters: {"id"=>"alkema"}
+Rendering template within layouts/application
+Rendering scan/single
+Rendered layouts/_choices (0.3ms)
+Completed in 7ms (View: 6, DB: 2) | 200 OK [http://localhost/u/alkema]
+
+
+Processing ScanController#user (for 127.0.0.1 at 2010-01-02 19:13:08) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+  Parameters: {"u"=>"alkema"}
+Completed in 1654ms (View: 0, DB: 1) | 200 OK [http://localhost/scan/user/?u=alkema]
+
+
+Processing ScanController#single (for 127.0.0.1 at 2010-01-02 19:13:31) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+  Parameters: {"id"=>"scoble"}
+Rendering template within layouts/application
+Rendering scan/single
+Rendered layouts/_choices (0.2ms)
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://localhost/u/scoble]
+
+
+Processing ScanController#user (for 127.0.0.1 at 2010-01-02 19:13:31) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+  Parameters: {"u"=>"scoble"}
+Completed in 1366ms (View: 0, DB: 0) | 200 OK [http://localhost/scan/user/?u=scoble]
+
+
+Processing ScanController#single (for 127.0.0.1 at 2010-01-02 19:13:59) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+  Parameters: {"id"=>"scobleizer"}
+Rendering template within layouts/application
+Rendering scan/single
+Rendered layouts/_choices (0.2ms)
+Completed in 63ms (View: 5, DB: 0) | 200 OK [http://localhost/u/scobleizer]
+
+
+Processing ScanController#user (for 127.0.0.1 at 2010-01-02 19:14:00) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+  Parameters: {"u"=>"scobleizer"}
+Completed in 1545ms (View: 0, DB: 0) | 200 OK [http://localhost/scan/user/?u=scobleizer]
+
+
+Processing ScanController#single (for 127.0.0.1 at 2010-01-02 19:14:04) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+  Parameters: {"id"=>"scobleizer"}
+Rendering template within layouts/application
+Rendering scan/single
+Rendered layouts/_choices (0.2ms)
+Completed in 6ms (View: 5, DB: 1) | 200 OK [http://localhost/u/scobleizer]
+
+
+Processing ScanController#user (for 127.0.0.1 at 2010-01-02 19:14:04) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+  Parameters: {"u"=>"scobleizer"}
+Completed in 610ms (View: 0, DB: 1) | 200 OK [http://localhost/scan/user/?u=scobleizer]
+
+
+Processing ScanController#single (for 127.0.0.1 at 2010-01-02 19:14:18) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+  Parameters: {"id"=>"scobleizer"}
+Rendering template within layouts/application
+Rendering scan/single
+Rendered layouts/_choices (0.2ms)
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://localhost/u/scobleizer]
+
+
+Processing ScanController#user (for 127.0.0.1 at 2010-01-02 19:14:18) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+  Parameters: {"u"=>"scobleizer"}
+Completed in 1017ms (View: 0, DB: 0) | 200 OK [http://localhost/scan/user/?u=scobleizer]
+
+
+Processing ScanController#single (for 127.0.0.1 at 2010-01-02 19:14:41) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+  Parameters: {"id"=>"scobleizer"}
+Rendering template within layouts/application
+Rendering scan/single
+Rendered layouts/_choices (0.2ms)
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://localhost/u/scobleizer]
+
+
+Processing ScanController#user (for 127.0.0.1 at 2010-01-02 19:14:41) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+  Parameters: {"u"=>"scobleizer"}
+Completed in 599ms (View: 0, DB: 0) | 200 OK [http://localhost/scan/user/?u=scobleizer]
+
+
+Processing ScanController#single (for 127.0.0.1 at 2010-01-02 19:14:46) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+  Parameters: {"id"=>"scobleizer"}
+Rendering template within layouts/application
+Rendering scan/single
+Rendered layouts/_choices (0.2ms)
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://localhost/u/scobleizer]
+
+
+Processing ScanController#user (for 127.0.0.1 at 2010-01-02 19:14:46) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+  Parameters: {"u"=>"scobleizer"}
+Completed in 603ms (View: 0, DB: 0) | 200 OK [http://localhost/scan/user/?u=scobleizer]
+
+
+Processing ScanController#single (for 127.0.0.1 at 2010-01-02 19:14:52) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+  Parameters: {"id"=>"scobleizer"}
+Rendering template within layouts/application
+Rendering scan/single
+Rendered layouts/_choices (0.2ms)
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://localhost/u/scobleizer]
+
+
+Processing ScanController#user (for 127.0.0.1 at 2010-01-02 19:14:52) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+  Parameters: {"u"=>"scobleizer"}
+Completed in 598ms (View: 0, DB: 0) | 200 OK [http://localhost/scan/user/?u=scobleizer]
+
+
+Processing DefaultController#index (for 127.0.0.1 at 2010-01-02 19:15:35) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+Rendering template within layouts/application
+Rendering default/index
+Rendered layouts/_choices (0.2ms)
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ScanController#single (for 127.0.0.1 at 2010-01-02 19:15:45) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+  Parameters: {"id"=>"apike"}
+Rendering template within layouts/application
+Rendering scan/single
+Rendered layouts/_choices (0.2ms)
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://localhost/u/apike]
+
+
+Processing ScanController#user (for 127.0.0.1 at 2010-01-02 19:15:45) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+  Parameters: {"u"=>"apike"}
+Completed in 1641ms (View: 0, DB: 1) | 200 OK [http://localhost/scan/user/?u=apike]
+
+
+Processing DefaultController#login (for 127.0.0.1 at 2010-01-02 19:15:57) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+Redirected to http://twitter.com/oauth/authorize?oauth_token=dnWAseD96YWvpgJjmj6ZUpmJy7sCYtJhxlEDDjE
+Completed in 122ms (DB: 0) | 302 Found [http://localhost/default/login/]
+
+
+Processing DefaultController#oauth (for 127.0.0.1 at 2010-01-02 19:16:02) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+  Parameters: {"oauth_token"=>"dnWAseD96YWvpgJjmj6ZUpmJy7sCYtJhxlEDDjE", "oauth_verifier"=>"BXSF5VQBL9OIL8SmExUtH55TzsP70nTiPZleN2DKfCw"}
+Redirected to /scan/
+Completed in 330ms (DB: 0) | 302 Found [http://localhost/default/oauth/?oauth_token=dnWAseD96YWvpgJjmj6ZUpmJy7sCYtJhxlEDDjE&oauth_verifier=BXSF5VQBL9OIL8SmExUtH55TzsP70nTiPZleN2DKfCw]
+
+
+Processing ScanController#index (for 127.0.0.1 at 2010-01-02 19:16:03) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+Rendering template within layouts/application
+Rendering scan/index
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/scan/]
+
+
+Processing ScanController#followed (for 127.0.0.1 at 2010-01-02 19:16:03) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+  Parameters: {"page"=>"1"}
+Completed in 2001ms (View: 0, DB: 1) | 200 OK [http://localhost/scan/followed/?page=1]
+
+
+Processing ScanController#followed (for 127.0.0.1 at 2010-01-02 19:16:05) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+  Parameters: {"page"=>"2"}
+Completed in 3915ms (View: 0, DB: 0) | 200 OK [http://localhost/scan/followed/?page=2]
+
+
+Processing ScanController#single (for 127.0.0.1 at 2010-01-02 19:16:17) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+  Parameters: {"id"=>"jimpick"}
+Rendering template within layouts/application
+Rendering scan/single
+Rendered layouts/_choices (0.2ms)
+Completed in 7ms (View: 6, DB: 0) | 200 OK [http://localhost/u/jimpick]
+
+
+Processing ScanController#user (for 127.0.0.1 at 2010-01-02 19:16:17) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+  Parameters: {"u"=>"jimpick"}
+Completed in 5737ms (View: 0, DB: 0) | 200 OK [http://localhost/scan/user/?u=jimpick]
+
+
+Processing ScanController#single (for 127.0.0.1 at 2010-01-02 19:16:27) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+  Parameters: {"id"=>"codinghorror"}
+Rendering template within layouts/application
+Rendering scan/single
+Rendered layouts/_choices (0.1ms)
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://localhost/u/codinghorror]
+
+
+Processing ScanController#user (for 127.0.0.1 at 2010-01-02 19:16:27) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+  Parameters: {"u"=>"codinghorror"}
+Completed in 1497ms (View: 0, DB: 0) | 200 OK [http://localhost/scan/user/?u=codinghorror]
+
+
+Processing ScanController#single (for 127.0.0.1 at 2010-01-02 19:16:34) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+  Parameters: {"id"=>"jasonfried"}
+Rendering template within layouts/application
+Rendering scan/single
+Rendered layouts/_choices (0.1ms)
+Completed in 7ms (View: 6, DB: 0) | 200 OK [http://localhost/u/jasonfried]
+
+
+Processing ScanController#user (for 127.0.0.1 at 2010-01-02 19:16:34) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+  Parameters: {"u"=>"jasonfried"}
+Completed in 1309ms (View: 0, DB: 0) | 200 OK [http://localhost/scan/user/?u=jasonfried]
+
+
+Processing ScanController#single (for 127.0.0.1 at 2010-01-02 19:16:35) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+  Parameters: {"id"=>"hfiguiere"}
+Rendering template within layouts/application
+Rendering scan/single
+Rendered layouts/_choices (0.1ms)
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://localhost/u/hfiguiere]
+
+
+Processing ScanController#user (for 127.0.0.1 at 2010-01-02 19:16:35) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+  Parameters: {"u"=>"hfiguiere"}
+Completed in 6518ms (View: 0, DB: 0) | 200 OK [http://localhost/scan/user/?u=hfiguiere]
+
+
+Processing ScanController#single (for 127.0.0.1 at 2010-01-02 19:16:48) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+  Parameters: {"id"=>"angelinamagnum"}
+Rendering template within layouts/application
+Rendering scan/single
+Rendered layouts/_choices (0.1ms)
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://localhost/u/angelinamagnum]
+
+
+Processing ScanController#user (for 127.0.0.1 at 2010-01-02 19:16:49) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+  Parameters: {"u"=>"angelinamagnum"}
+Completed in 8661ms (View: 0, DB: 0) | 200 OK [http://localhost/scan/user/?u=angelinamagnum]
+
+
+Processing ScanController#single (for 127.0.0.1 at 2010-01-02 19:16:57) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+  Parameters: {"id"=>"brianleroux"}
+Rendering template within layouts/application
+Rendering scan/single
+Rendered layouts/_choices (0.1ms)
+Completed in 7ms (View: 6, DB: 0) | 200 OK [http://localhost/u/brianleroux]
+
+
+Processing ScanController#single (for 127.0.0.1 at 2010-01-02 19:16:57) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+  Parameters: {"id"=>"wilshipley"}
+Rendering template within layouts/application
+Rendering scan/single
+Rendered layouts/_choices (0.1ms)
+Completed in 7ms (View: 5, DB: 0) | 200 OK [http://localhost/u/wilshipley]
+
+
+Processing ScanController#user (for 127.0.0.1 at 2010-01-02 19:16:57) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+  Parameters: {"u"=>"brianleroux"}
+Completed in 5950ms (View: 0, DB: 0) | 200 OK [http://localhost/scan/user/?u=brianleroux]
+
+
+Processing ScanController#user (for 127.0.0.1 at 2010-01-02 19:17:03) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+  Parameters: {"u"=>"wilshipley"}
+Completed in 1399ms (View: 0, DB: 0) | 200 OK [http://localhost/scan/user/?u=wilshipley]
+
+
+Processing ScanController#index (for 127.0.0.1 at 2010-01-02 19:18:17) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+Rendering template within layouts/application
+Rendering scan/index
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://localhost/scan/]
+
+
+Processing ScanController#followed (for 127.0.0.1 at 2010-01-02 19:18:17) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+  Parameters: {"page"=>"1"}
+Completed in 1590ms (View: 0, DB: 1) | 200 OK [http://localhost/scan/followed/?page=1]
+
+
+Processing ScanController#followed (for 127.0.0.1 at 2010-01-02 19:18:19) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+  Parameters: {"page"=>"2"}
+Completed in 1480ms (View: 0, DB: 0) | 200 OK [http://localhost/scan/followed/?page=2]
+
+
+Processing ScanController#followed (for 127.0.0.1 at 2010-01-02 19:18:21) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+  Parameters: {"page"=>"3"}
+Completed in 2960ms (View: 0, DB: 0) | 200 OK [http://localhost/scan/followed/?page=3]
+
+
+Processing ScanController#user (for 127.0.0.1 at 2010-01-02 19:19:35) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+  Parameters: {"u"=>"l"}
+Completed in 1227ms (View: 0, DB: 0) | 200 OK [http://localhost/scan/user/?u=l]
+
+
+Processing ScanController#single (for 127.0.0.1 at 2010-01-02 19:19:38) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+  Parameters: {"id"=>"codinghorror"}
+Rendering template within layouts/application
+Rendering scan/single
+Rendered layouts/_choices (0.1ms)
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://localhost/u/codinghorror]
+
+
+Processing ScanController#user (for 127.0.0.1 at 2010-01-02 19:19:38) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+  Parameters: {"u"=>"codinghorror"}
+Completed in 2024ms (View: 0, DB: 0) | 200 OK [http://localhost/scan/user/?u=codinghorror]
+
+
+Processing ScanController#single (for 127.0.0.1 at 2010-01-02 19:19:42) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+  Parameters: {"id"=>"l"}
+Rendering template within layouts/application
+Rendering scan/single
+Rendered layouts/_choices (0.1ms)
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://localhost/u/l]
+
+
+Processing ScanController#user (for 127.0.0.1 at 2010-01-02 19:19:42) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+  Parameters: {"u"=>"l"}
+Completed in 203ms (View: 0, DB: 0) | 200 OK [http://localhost/scan/user/?u=l]
+
+
+Processing ScanController#single (for 127.0.0.1 at 2010-01-02 19:20:17) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+  Parameters: {"id"=>"scobleizer"}
+Rendering template within layouts/application
+Rendering scan/single
+Rendered layouts/_choices (0.1ms)
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://localhost/u/scobleizer]
+
+
+Processing ScanController#user (for 127.0.0.1 at 2010-01-02 19:20:17) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+  Parameters: {"u"=>"scobleizer"}
+Completed in 2021ms (View: 0, DB: 0) | 200 OK [http://localhost/scan/user/?u=scobleizer]
+
+
+Processing ScanController#single (for 127.0.0.1 at 2010-01-02 19:25:36) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+  Parameters: {"id"=>"scobleizer"}
+Rendering template within layouts/application
+Rendering scan/single
+Rendered layouts/_choices (0.1ms)
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://localhost/u/scobleizer]
+
+
+Processing ScanController#user (for 127.0.0.1 at 2010-01-02 19:25:36) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+  Parameters: {"u"=>"scobleizer"}
+Completed in 2415ms (View: 0, DB: 1) | 200 OK [http://localhost/scan/user/?u=scobleizer]
+
+
+Processing DefaultController#index (for 127.0.0.1 at 2010-01-02 19:26:54) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+Rendering template within layouts/application
+Rendering default/index
+Rendered layouts/_choices (0.1ms)
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ScanController#index (for 127.0.0.1 at 2010-01-02 19:27:15) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+Rendering template within layouts/application
+Rendering scan/index
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/scan/]
+
+
+Processing ScanController#followed (for 127.0.0.1 at 2010-01-02 19:27:15) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+  Parameters: {"page"=>"1"}
+Completed in 1617ms (View: 0, DB: 0) | 200 OK [http://localhost/scan/followed/?page=1]
+
+
+Processing ScanController#followed (for 127.0.0.1 at 2010-01-02 19:27:17) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+  Parameters: {"page"=>"2"}
+Completed in 1994ms (View: 0, DB: 0) | 200 OK [http://localhost/scan/followed/?page=2]
+
+
+Processing ScanController#followed (for 127.0.0.1 at 2010-01-02 19:27:19) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+  Parameters: {"page"=>"3"}
+Completed in 1265ms (View: 0, DB: 0) | 200 OK [http://localhost/scan/followed/?page=3]
+
+
+Processing ScanController#followed (for 127.0.0.1 at 2010-01-02 19:27:21) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+  Parameters: {"page"=>"4"}
+Completed in 3702ms (View: 0, DB: 0) | 200 OK [http://localhost/scan/followed/?page=4]
+
+
+Processing ScanController#single (for 127.0.0.1 at 2010-01-02 19:29:59) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+  Parameters: {"id"=>"codinghorror"}
+Rendering template within layouts/application
+Rendering scan/single
+Rendered layouts/_choices (0.1ms)
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://localhost/u/codinghorror]
+
+
+Processing ScanController#user (for 127.0.0.1 at 2010-01-02 19:29:59) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+  Parameters: {"u"=>"codinghorror"}
+Completed in 1577ms (View: 0, DB: 0) | 200 OK [http://localhost/scan/user/?u=codinghorror]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-01-02 19:30:01) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+
+
+ActionController::RoutingError (No route matches "/logout/" with {:method=>:get}):
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/routing/recognition_optimisation.rb:66:in `recognize_path'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/routing/route_set.rb:386:in `recognize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:182:in `handle_request'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:103:in `handle_dispatch'
+    /Library/Ruby/Gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:74:in `service'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    /System/Library/Frameworks/Ruby.framework/Versions/1.8/usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+    /Library/Ruby/Gems/1.8/gems/rails-2.2.2/lib/webrick_server.rb:60:in `dispatch'
+    /Library/Ruby/Gems/1.8/gems/rails-2.2.2/lib/commands/servers/webrick.rb:66
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    /Library/Ruby/Gems/1.8/gems/activesupport-2.2.2/lib/active_support/dependencies.rb:153:in `require'
+    /Library/Ruby/Gems/1.8/gems/rails-2.2.2/lib/commands/server.rb:49
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+    /Library/Ruby/Site/1.8/rubygems/custom_require.rb:31:in `require'
+    script/server:3
+
+Rendering /Library/Ruby/Gems/1.8/gems/actionpack-2.2.2/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing DefaultController#logout (for 127.0.0.1 at 2010-01-02 19:30:09) [GET]
+  Session ID: 7076f24ece05dfbf8dd69e6605fd0451
+Redirected to /
+Completed in 7ms (DB: 1) | 302 Found [http://localhost/default/logout/]
+
+
+Processing DefaultController#index (for 127.0.0.1 at 2010-01-02 19:30:09) [GET]
+  Session ID: a97f5fd62f46efd7f8f6e7664f49364a
+Rendering template within layouts/application
+Rendering default/index
+Rendered layouts/_choices (0.2ms)
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing DefaultController#index (for 127.0.0.1 at 2010-01-02 19:30:16) [GET]
+  Session ID: a97f5fd62f46efd7f8f6e7664f49364a
+Rendering template within layouts/application
+Rendering default/index
+Rendered layouts/_choices (0.2ms)
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing DefaultController#login (for 127.0.0.1 at 2010-01-02 19:30:19) [GET]
+  Session ID: a97f5fd62f46efd7f8f6e7664f49364a
+Redirected to http://twitter.com/oauth/authorize?oauth_token=9vrWqjDOONf7GseAQAD2LxFkpXlURUIqnnyuC5A
+Completed in 78ms (DB: 0) | 302 Found [http://localhost/default/login/]
+
+
+Processing DefaultController#oauth (for 127.0.0.1 at 2010-01-02 19:30:21) [GET]
+  Session ID: a97f5fd62f46efd7f8f6e7664f49364a
+  Parameters: {"oauth_token"=>"9vrWqjDOONf7GseAQAD2LxFkpXlURUIqnnyuC5A", "oauth_verifier"=>"sAQr6NM7SnbhBL5jMqxyQfIJfMb83XElfhOUYSg2CLU"}
+Redirected to /scan/
+Completed in 537ms (DB: 0) | 302 Found [http://localhost/default/oauth/?oauth_token=9vrWqjDOONf7GseAQAD2LxFkpXlURUIqnnyuC5A&oauth_verifier=sAQr6NM7SnbhBL5jMqxyQfIJfMb83XElfhOUYSg2CLU]
+
+
+Processing ScanController#index (for 127.0.0.1 at 2010-01-02 19:30:22) [GET]
+  Session ID: a97f5fd62f46efd7f8f6e7664f49364a
+Rendering template within layouts/application
+Rendering scan/index
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/scan/]
+
+
+Processing ScanController#followed (for 127.0.0.1 at 2010-01-02 19:30:22) [GET]
+  Session ID: a97f5fd62f46efd7f8f6e7664f49364a
+  Parameters: {"page"=>"1"}
+Completed in 1382ms (View: 0, DB: 0) | 200 OK [http://localhost/scan/followed/?page=1]
+
+
+Processing ScanController#followed (for 127.0.0.1 at 2010-01-02 19:30:23) [GET]
+  Session ID: a97f5fd62f46efd7f8f6e7664f49364a
+  Parameters: {"page"=>"2"}
+Completed in 2815ms (View: 0, DB: 0) | 200 OK [http://localhost/scan/followed/?page=2]
+
+
+Processing ScanController#followed (for 127.0.0.1 at 2010-01-02 19:30:26) [GET]
+  Session ID: a97f5fd62f46efd7f8f6e7664f49364a
+  Parameters: {"page"=>"3"}
+Completed in 6493ms (View: 0, DB: 0) | 200 OK [http://localhost/scan/followed/?page=3]
+
+
+Processing DefaultController#logout (for 127.0.0.1 at 2010-01-02 19:30:34) [GET]
+  Session ID: a97f5fd62f46efd7f8f6e7664f49364a
+Redirected to /
+Completed in 6ms (DB: 1) | 302 Found [http://localhost/default/logout/]
+
+
+Processing DefaultController#index (for 127.0.0.1 at 2010-01-02 19:30:34) [GET]
+  Session ID: d913007076095ace5c447823fc03034b
+Rendering template within layouts/application
+Rendering default/index
+Rendered layouts/_choices (0.2ms)
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ScanController#index (for 127.0.0.1 at 2010-01-02 19:30:46) [GET]
+  Session ID: d913007076095ace5c447823fc03034b
+Rendering template within layouts/application
+Rendering scan/index
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/scan/]
+
+
+Processing ScanController#followed (for 127.0.0.1 at 2010-01-02 19:30:46) [GET]
+  Session ID: d913007076095ace5c447823fc03034b
+  Parameters: {"page"=>"1"}
+Completed in 893ms (View: 0, DB: 1) | 200 OK [http://localhost/scan/followed/?page=1]
+
+
+Processing DefaultController#index (for 127.0.0.1 at 2010-01-02 19:30:49) [GET]
+  Session ID: d913007076095ace5c447823fc03034b
+Rendering template within layouts/application
+Rendering default/index
+Rendered layouts/_choices (0.2ms)
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ScanController#single (for 127.0.0.1 at 2010-01-02 19:30:58) [GET]
+  Session ID: d913007076095ace5c447823fc03034b
+  Parameters: {"id"=>"apike"}
+Rendering template within layouts/application
+Rendering scan/single
+Rendered layouts/_choices (0.2ms)
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://localhost/u/apike]
+
+
+Processing ScanController#user (for 127.0.0.1 at 2010-01-02 19:30:58) [GET]
+  Session ID: d913007076095ace5c447823fc03034b
+  Parameters: {"u"=>"apike"}
+Completed in 1283ms (View: 0, DB: 1) | 200 OK [http://localhost/scan/user/?u=apike]
+
+
+Processing ScanController#single (for 127.0.0.1 at 2010-01-02 19:34:02) [GET]
+  Session ID: d913007076095ace5c447823fc03034b
+  Parameters: {"id"=>"apike"}
+Rendering template within layouts/application
+Rendering scan/single
+Rendered layouts/_choices (0.2ms)
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://localhost/u/apike]
+
+
+Processing ScanController#user (for 127.0.0.1 at 2010-01-02 19:34:02) [GET]
+  Session ID: d913007076095ace5c447823fc03034b
+  Parameters: {"u"=>"apike"}
+Completed in 617ms (View: 0, DB: 1) | 200 OK [http://localhost/scan/user/?u=apike]
+
+
+Processing ScanController#single (for 127.0.0.1 at 2010-01-02 19:34:04) [GET]
+  Session ID: d913007076095ace5c447823fc03034b
+  Parameters: {"id"=>"l"}
+Rendering template within layouts/application
+Rendering scan/single
+Rendered layouts/_choices (0.2ms)
+Completed in 7ms (View: 5, DB: 0) | 200 OK [http://localhost/u/l]
+
+
+Processing ScanController#user (for 127.0.0.1 at 2010-01-02 19:34:05) [GET]
+  Session ID: d913007076095ace5c447823fc03034b
+  Parameters: {"u"=>"l"}
+Completed in 78ms (View: 0, DB: 0) | 200 OK [http://localhost/scan/user/?u=l]
+
+
+Processing DefaultController#login (for 127.0.0.1 at 2010-01-02 19:34:08) [GET]
+  Session ID: d913007076095ace5c447823fc03034b
+Redirected to http://twitter.com/oauth/authorize?oauth_token=CDhcsKtoWHP7ehBLuiU0VEvRpqYqf223QpqvXLGYQD0
+Completed in 88ms (DB: 0) | 302 Found [http://localhost/default/login/]
+
+
+Processing ScanController#index (for 127.0.0.1 at 2010-01-02 19:34:26) [GET]
+  Session ID: d913007076095ace5c447823fc03034b
+Rendering template within layouts/application
+Rendering scan/index
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/scan/]
+
+
+Processing ScanController#followed (for 127.0.0.1 at 2010-01-02 19:34:27) [GET]
+  Session ID: d913007076095ace5c447823fc03034b
+  Parameters: {"page"=>"1"}
+Completed in 179ms (View: 0, DB: 0) | 200 OK [http://localhost/scan/followed/?page=1]
+
+
+Processing DefaultController#index (for 127.0.0.1 at 2010-01-02 19:34:28) [GET]
+  Session ID: d913007076095ace5c447823fc03034b
+Rendering template within layouts/application
+Rendering default/index
+Rendered layouts/_choices (0.2ms)
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing DefaultController#index (for 127.0.0.1 at 2010-01-02 19:35:05) [GET]
+  Session ID: d913007076095ace5c447823fc03034b
+Rendering template within layouts/application
+Rendering default/index
+Rendered layouts/_choices (0.3ms)
+Completed in 7ms (View: 6, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing DefaultController#login (for 127.0.0.1 at 2010-01-02 19:35:13) [GET]
+  Session ID: d913007076095ace5c447823fc03034b
+Redirected to http://twitter.com/oauth/authorize?oauth_token=XlvGJit8VPWlPthVhVkZMXQCCewi9QGQsLAQts2Jek
+Completed in 87ms (DB: 0) | 302 Found [http://localhost/default/login/]
+
+
+Processing DefaultController#oauth (for 127.0.0.1 at 2010-01-02 19:35:15) [GET]
+  Session ID: d913007076095ace5c447823fc03034b
+  Parameters: {"oauth_token"=>"XlvGJit8VPWlPthVhVkZMXQCCewi9QGQsLAQts2Jek", "oauth_verifier"=>"pffYcJsY0RdX7H9Ym50SBxKe1R8ewjj4SWFwjeEebI"}
+Completed in 5646ms (View: 0, DB: 1) | 200 OK [http://localhost/default/oauth/?oauth_token=XlvGJit8VPWlPthVhVkZMXQCCewi9QGQsLAQts2Jek&oauth_verifier=pffYcJsY0RdX7H9Ym50SBxKe1R8ewjj4SWFwjeEebI]
+
+
+Processing DefaultController#oauth (for 127.0.0.1 at 2010-01-02 19:35:26) [GET]
+  Session ID: d913007076095ace5c447823fc03034b
+  Parameters: {"oauth_token"=>"XlvGJit8VPWlPthVhVkZMXQCCewi9QGQsLAQts2Jek", "oauth_verifier"=>"pffYcJsY0RdX7H9Ym50SBxKe1R8ewjj4SWFwjeEebI"}
+Redirected to /scan/
+Completed in 495ms (DB: 0) | 302 Found [http://localhost/default/oauth/?oauth_token=XlvGJit8VPWlPthVhVkZMXQCCewi9QGQsLAQts2Jek&oauth_verifier=pffYcJsY0RdX7H9Ym50SBxKe1R8ewjj4SWFwjeEebI]
+
+
+Processing ScanController#index (for 127.0.0.1 at 2010-01-02 19:35:26) [GET]
+  Session ID: d913007076095ace5c447823fc03034b
+Rendering template within layouts/application
+Rendering scan/index
+Completed in 4ms (View: 3, DB: 1) | 200 OK [http://localhost/scan/]
+
+
+Processing ScanController#followed (for 127.0.0.1 at 2010-01-02 19:35:27) [GET]
+  Session ID: d913007076095ace5c447823fc03034b
+  Parameters: {"page"=>"1"}
+Completed in 833ms (View: 0, DB: 1) | 200 OK [http://localhost/scan/followed/?page=1]
+
+
+Processing ScanController#followed (for 127.0.0.1 at 2010-01-02 19:35:28) [GET]
+  Session ID: d913007076095ace5c447823fc03034b
+  Parameters: {"page"=>"2"}
+Completed in 765ms (View: 0, DB: 0) | 200 OK [http://localhost/scan/followed/?page=2]
+
+
+Processing ScanController#followed (for 127.0.0.1 at 2010-01-02 19:35:28) [GET]
+  Session ID: d913007076095ace5c447823fc03034b
+  Parameters: {"page"=>"3"}
+Completed in 877ms (View: 0, DB: 0) | 200 OK [http://localhost/scan/followed/?page=3]
+
+
+Processing ScanController#followed (for 127.0.0.1 at 2010-01-02 19:35:30) [GET]
+  Session ID: d913007076095ace5c447823fc03034b
+  Parameters: {"page"=>"4"}
+Completed in 10072ms (View: 0, DB: 0) | 200 OK [http://localhost/scan/followed/?page=4]
+
+
+Processing ScanController#user (for 127.0.0.1 at 2010-01-02 19:36:18) [GET]
+  Session ID: d913007076095ace5c447823fc03034b
+  Parameters: {"u"=>"dfsoihiohfwfew"}
+Completed in 649ms (View: 0, DB: 0) | 200 OK [http://localhost/scan/user/?u=dfsoihiohfwfew]
+
+
+Processing ScanController#index (for 127.0.0.1 at 2010-01-02 19:36:52) [GET]
+  Session ID: d913007076095ace5c447823fc03034b
+Rendering template within layouts/application
+Rendering scan/index
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/scan/]
+
+
+Processing ScanController#followed (for 127.0.0.1 at 2010-01-02 19:36:52) [GET]
+  Session ID: d913007076095ace5c447823fc03034b
+  Parameters: {"page"=>"1"}
+Completed in 777ms (View: 0, DB: 0) | 200 OK [http://localhost/scan/followed/?page=1]
+
+
+Processing ScanController#followed (for 127.0.0.1 at 2010-01-02 19:36:53) [GET]
+  Session ID: d913007076095ace5c447823fc03034b
+  Parameters: {"page"=>"2"}
+Completed in 2040ms (View: 0, DB: 0) | 200 OK [http://localhost/scan/followed/?page=2]
+
+
+Processing ScanController#followed (for 127.0.0.1 at 2010-01-02 19:36:55) [GET]
+  Session ID: d913007076095ace5c447823fc03034b
+  Parameters: {"page"=>"3"}
+Completed in 11942ms (View: 0, DB: 0) | 200 OK [http://localhost/scan/followed/?page=3]
+
+
+Processing ScanController#user (for 127.0.0.1 at 2010-01-02 19:37:10) [GET]
+  Session ID: d913007076095ace5c447823fc03034b
+  Parameters: {"u"=>"ewiehiooiou"}
+Completed in 614ms (View: 0, DB: 0) | 200 OK [http://localhost/scan/user/?u=ewiehiooiou]
+
+
+Processing ScanController#user (for 127.0.0.1 at 2010-01-02 19:37:16) [GET]
+  Session ID: d913007076095ace5c447823fc03034b
+  Parameters: {"u"=>"al3x"}
+Completed in 1351ms (View: 0, DB: 0) | 200 OK [http://localhost/scan/user/?u=al3x]
+
+
+Processing ScanController#single (for 127.0.0.1 at 2010-01-02 19:37:25) [GET]
+  Session ID: d913007076095ace5c447823fc03034b
+  Parameters: {"id"=>"al3x"}
+Rendering template within layouts/application
+Rendering scan/single
+Rendered layouts/_choices (0.1ms)
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://localhost/u/al3x]
+
+
+Processing ScanController#user (for 127.0.0.1 at 2010-01-02 19:37:25) [GET]
+  Session ID: d913007076095ace5c447823fc03034b
+  Parameters: {"u"=>"al3x"}
+Completed in 1777ms (View: 0, DB: 0) | 200 OK [http://localhost/scan/user/?u=al3x]
+
+
+Processing ScanController#single (for 127.0.0.1 at 2010-01-02 19:40:02) [GET]
+  Session ID: d913007076095ace5c447823fc03034b
+  Parameters: {"id"=>"al3x"}
+Rendering template within layouts/application
+Rendering scan/single
+Rendered layouts/_choices (0.1ms)
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://localhost/u/al3x]
+
+
+Processing ScanController#user (for 127.0.0.1 at 2010-01-02 19:40:03) [GET]
+  Session ID: d913007076095ace5c447823fc03034b
+  Parameters: {"u"=>"al3x"}
+Completed in 1845ms (View: 0, DB: 1) | 200 OK [http://localhost/scan/user/?u=al3x]
+
+
+Processing ScanController#single (for 127.0.0.1 at 2010-01-02 19:40:07) [GET]
+  Session ID: d913007076095ace5c447823fc03034b
+  Parameters: {"id"=>"al3x"}
+Rendering template within layouts/application
+Rendering scan/single
+Rendered layouts/_choices (0.1ms)
+Completed in 60ms (View: 59, DB: 0) | 200 OK [http://localhost/u/al3x]
+
+
+Processing ScanController#user (for 127.0.0.1 at 2010-01-02 19:40:07) [GET]
+  Session ID: d913007076095ace5c447823fc03034b
+  Parameters: {"u"=>"al3x"}
+Completed in 1135ms (View: 0, DB: 0) | 200 OK [http://localhost/scan/user/?u=al3x]
+
+
+Processing ScanController#single (for 127.0.0.1 at 2010-01-02 19:40:26) [GET]
+  Session ID: d913007076095ace5c447823fc03034b
+  Parameters: {"id"=>"al3x"}
+Rendering template within layouts/application
+Rendering scan/single
+Rendered layouts/_choices (0.1ms)
+Completed in 6ms (View: 5, DB: 1) | 200 OK [http://localhost/u/al3x]
+
+
+Processing ScanController#user (for 127.0.0.1 at 2010-01-02 19:40:26) [GET]
+  Session ID: d913007076095ace5c447823fc03034b
+  Parameters: {"u"=>"al3x"}
+Completed in 1693ms (View: 0, DB: 0) | 200 OK [http://localhost/scan/user/?u=al3x]
+
+
+Processing ScanController#single (for 127.0.0.1 at 2010-01-02 19:40:41) [GET]
+  Session ID: d913007076095ace5c447823fc03034b
+  Parameters: {"id"=>"al3x"}
+Rendering template within layouts/application
+Rendering scan/single
+Rendered layouts/_choices (0.1ms)
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://localhost/u/al3x]
+
+
+Processing ScanController#user (for 127.0.0.1 at 2010-01-02 19:40:41) [GET]
+  Session ID: d913007076095ace5c447823fc03034b
+  Parameters: {"u"=>"al3x"}
+Completed in 1809ms (View: 0, DB: 0) | 200 OK [http://localhost/scan/user/?u=al3x]
+
+
+Processing DefaultController#index (for 127.0.0.1 at 2010-01-02 19:40:58) [GET]
+  Session ID: d913007076095ace5c447823fc03034b
+Rendering template within layouts/application
+Rendering default/index
+Rendered layouts/_choices (0.1ms)
+Completed in 6ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ScanController#index (for 127.0.0.1 at 2010-01-02 19:42:12) [GET]
+  Session ID: d913007076095ace5c447823fc03034b
+Rendering template within layouts/application
+Rendering scan/index
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/scan/]
+
+
+Processing ScanController#followed (for 127.0.0.1 at 2010-01-02 19:42:12) [GET]
+  Session ID: d913007076095ace5c447823fc03034b
+  Parameters: {"page"=>"1"}
+Completed in 1550ms (View: 0, DB: 1) | 200 OK [http://localhost/scan/followed/?page=1]
+
+
+Processing ScanController#followed (for 127.0.0.1 at 2010-01-02 19:42:14) [GET]
+  Session ID: d913007076095ace5c447823fc03034b
+  Parameters: {"page"=>"2"}
+Completed in 1381ms (View: 0, DB: 0) | 200 OK [http://localhost/scan/followed/?page=2]
+
+
+Processing ScanController#followed (for 127.0.0.1 at 2010-01-02 19:42:15) [GET]
+  Session ID: d913007076095ace5c447823fc03034b
+  Parameters: {"page"=>"3"}
+Completed in 1730ms (View: 0, DB: 0) | 200 OK [http://localhost/scan/followed/?page=3]
+
+
+Processing ScanController#followed (for 127.0.0.1 at 2010-01-02 19:42:17) [GET]
+  Session ID: d913007076095ace5c447823fc03034b
+  Parameters: {"page"=>"4"}
+Completed in 1841ms (View: 0, DB: 0) | 200 OK [http://localhost/scan/followed/?page=4]
+
+
+Processing ScanController#single (for 127.0.0.1 at 2010-01-02 19:42:27) [GET]
+  Session ID: d913007076095ace5c447823fc03034b
+  Parameters: {"id"=>"scobleizer"}
+Rendering template within layouts/application
+Rendering scan/single
+Rendered layouts/_choices (0.1ms)
+Completed in 7ms (View: 6, DB: 0) | 200 OK [http://localhost/u/scobleizer]
+
+
+Processing ScanController#user (for 127.0.0.1 at 2010-01-02 19:42:27) [GET]
+  Session ID: d913007076095ace5c447823fc03034b
+  Parameters: {"u"=>"scobleizer"}
+Completed in 1251ms (View: 0, DB: 0) | 200 OK [http://localhost/scan/user/?u=scobleizer]
+
+
+Processing ScanController#single (for 127.0.0.1 at 2010-01-02 19:43:29) [GET]
+  Session ID: d913007076095ace5c447823fc03034b
+  Parameters: {"id"=>"scobleizer"}
+Rendering template within layouts/application
+Rendering scan/single
+Rendered layouts/_choices (0.1ms)
+Completed in 6ms (View: 5, DB: 0) | 200 OK [http://localhost/u/scobleizer]
+
+
+Processing ScanController#user (for 127.0.0.1 at 2010-01-02 19:43:29) [GET]
+  Session ID: d913007076095ace5c447823fc03034b
+  Parameters: {"u"=>"scobleizer"}
+Completed in 1712ms (View: 0, DB: 0) | 200 OK [http://localhost/scan/user/?u=scobleizer]
+
+
+Processing ScanController#index (for 127.0.0.1 at 2010-01-02 19:43:34) [GET]
+  Session ID: d913007076095ace5c447823fc03034b
+Rendering template within layouts/application
+Rendering scan/index
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/scan/]
+
+
+Processing ScanController#followed (for 127.0.0.1 at 2010-01-02 19:43:34) [GET]
+  Session ID: d913007076095ace5c447823fc03034b
+  Parameters: {"page"=>"1"}
+Completed in 1532ms (View: 0, DB: 1) | 200 OK [http://localhost/scan/followed/?page=1]
+
+
+Processing ScanController#followed (for 127.0.0.1 at 2010-01-02 19:43:36) [GET]
+  Session ID: d913007076095ace5c447823fc03034b
+  Parameters: {"page"=>"2"}
+Completed in 1883ms (View: 0, DB: 0) | 200 OK [http://localhost/scan/followed/?page=2]
+
+
+Processing ScanController#followed (for 127.0.0.1 at 2010-01-02 19:43:38) [GET]
+  Session ID: d913007076095ace5c447823fc03034b
+  Parameters: {"page"=>"3"}
+Completed in 1937ms (View: 0, DB: 1) | 200 OK [http://localhost/scan/followed/?page=3]
+
+
+Processing ScanController#followed (for 127.0.0.1 at 2010-01-02 19:43:40) [GET]
+  Session ID: d913007076095ace5c447823fc03034b
+  Parameters: {"page"=>"4"}
+Completed in 1472ms (View: 0, DB: 0) | 200 OK [http://localhost/scan/followed/?page=4]
+
+
+Processing ScanController#index (for 127.0.0.1 at 2010-01-02 19:43:57) [GET]
+  Session ID: d913007076095ace5c447823fc03034b
+Rendering template within layouts/application
+Rendering scan/index
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/scan/]
+
+
+Processing ScanController#followed (for 127.0.0.1 at 2010-01-02 19:43:57) [GET]
+  Session ID: d913007076095ace5c447823fc03034b
+  Parameters: {"page"=>"1"}
+Completed in 1082ms (View: 0, DB: 1) | 200 OK [http://localhost/scan/followed/?page=1]
+
+
+Processing ScanController#followed (for 127.0.0.1 at 2010-01-02 19:43:59) [GET]
+  Session ID: d913007076095ace5c447823fc03034b
+  Parameters: {"page"=>"2"}
+Completed in 1489ms (View: 0, DB: 0) | 200 OK [http://localhost/scan/followed/?page=2]
+
+
+Processing ScanController#followed (for 127.0.0.1 at 2010-01-02 19:44:00) [GET]
+  Session ID: d913007076095ace5c447823fc03034b
+  Parameters: {"page"=>"3"}
+Completed in 1436ms (View: 0, DB: 0) | 200 OK [http://localhost/scan/followed/?page=3]
+
+
+Processing ScanController#followed (for 127.0.0.1 at 2010-01-02 19:44:02) [GET]
+  Session ID: d913007076095ace5c447823fc03034b
+  Parameters: {"page"=>"4"}
+Completed in 1534ms (View: 0, DB: 0) | 200 OK [http://localhost/scan/followed/?page=4]
+
+
+Processing ScanController#followed (for 127.0.0.1 at 2010-01-02 19:44:03) [GET]
+  Session ID: d913007076095ace5c447823fc03034b
+  Parameters: {"page"=>"5"}
+Completed in 449ms (View: 0, DB: 0) | 200 OK [http://localhost/scan/followed/?page=5]
+
+
+Processing DefaultController#logout (for 127.0.0.1 at 2010-01-02 19:44:15) [GET]
+  Session ID: d913007076095ace5c447823fc03034b
+Redirected to /
+Completed in 7ms (DB: 1) | 302 Found [http://localhost/default/logout/]
+
+
+Processing DefaultController#index (for 127.0.0.1 at 2010-01-02 19:44:15) [GET]
+  Session ID: 092bd56721c33db96e9935ad576c3113
+Rendering template within layouts/application
+Rendering default/index
+Rendered layouts/_choices (0.2ms)
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing DefaultController#login (for 127.0.0.1 at 2010-01-02 19:44:16) [GET]
+  Session ID: 092bd56721c33db96e9935ad576c3113
+Redirected to http://twitter.com/oauth/authorize?oauth_token=nFm5ukqcoEV3LG1c5bt8gCrKrEy3HlG45BQlU2GZf4
+Completed in 91ms (DB: 0) | 302 Found [http://localhost/default/login/]
+
+
+Processing DefaultController#oauth (for 127.0.0.1 at 2010-01-02 19:44:17) [GET]
+  Session ID: 092bd56721c33db96e9935ad576c3113
+  Parameters: {"oauth_token"=>"nFm5ukqcoEV3LG1c5bt8gCrKrEy3HlG45BQlU2GZf4", "oauth_verifier"=>"0xvcEFtRAz2PwJaYKYRYWCHEw6ELujSKZuCmS15IAY"}
+Redirected to /scan/
+Completed in 151ms (DB: 0) | 302 Found [http://localhost/default/oauth/?oauth_token=nFm5ukqcoEV3LG1c5bt8gCrKrEy3HlG45BQlU2GZf4&oauth_verifier=0xvcEFtRAz2PwJaYKYRYWCHEw6ELujSKZuCmS15IAY]
+
+
+Processing ScanController#index (for 127.0.0.1 at 2010-01-02 19:44:18) [GET]
+  Session ID: 092bd56721c33db96e9935ad576c3113
+Rendering template within layouts/application
+Rendering scan/index
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/scan/]
+
+
+Processing ScanController#followed (for 127.0.0.1 at 2010-01-02 19:44:18) [GET]
+  Session ID: 092bd56721c33db96e9935ad576c3113
+  Parameters: {"page"=>"1"}
+Completed in 1418ms (View: 0, DB: 0) | 200 OK [http://localhost/scan/followed/?page=1]
+
+
+Processing DefaultController#logout (for 127.0.0.1 at 2010-01-02 19:44:19) [GET]
+  Session ID: 092bd56721c33db96e9935ad576c3113
+Redirected to /
+Completed in 6ms (DB: 1) | 302 Found [http://localhost/default/logout/]
+
+
+Processing DefaultController#index (for 127.0.0.1 at 2010-01-02 19:44:19) [GET]
+  Session ID: 6993b95f9bb1a259882f94d85689a74d
+Rendering template within layouts/application
+Rendering default/index
+Rendered layouts/_choices (0.2ms)
+Completed in 8ms (View: 6, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing DefaultController#login (for 127.0.0.1 at 2010-01-02 19:44:21) [GET]
+  Session ID: 6993b95f9bb1a259882f94d85689a74d
+Redirected to http://twitter.com/oauth/authorize?oauth_token=a4A4lZtiNNrmKwHFDJAvNDg96cH6naiPdVXFPR1Zmo
+Completed in 1031ms (DB: 0) | 302 Found [http://localhost/default/login/]
+
+
+Processing DefaultController#oauth (for 127.0.0.1 at 2010-01-02 19:44:29) [GET]
+  Session ID: 6993b95f9bb1a259882f94d85689a74d
+  Parameters: {"oauth_token"=>"a4A4lZtiNNrmKwHFDJAvNDg96cH6naiPdVXFPR1Zmo", "oauth_verifier"=>"iY69MAcuwJ0i7UBaf2d0wTEmmhH7wKDdyENNOeX8ug"}
+Redirected to /scan/
+Completed in 138ms (DB: 1) | 302 Found [http://localhost/default/oauth/?oauth_token=a4A4lZtiNNrmKwHFDJAvNDg96cH6naiPdVXFPR1Zmo&oauth_verifier=iY69MAcuwJ0i7UBaf2d0wTEmmhH7wKDdyENNOeX8ug]
+
+
+Processing ScanController#index (for 127.0.0.1 at 2010-01-02 19:44:29) [GET]
+  Session ID: 6993b95f9bb1a259882f94d85689a74d
+Rendering template within layouts/application
+Rendering scan/index
+Completed in 4ms (View: 3, DB: 0) | 200 OK [http://localhost/scan/]
+
+
+Processing ScanController#followed (for 127.0.0.1 at 2010-01-02 19:44:29) [GET]
+  Session ID: 6993b95f9bb1a259882f94d85689a74d
+  Parameters: {"page"=>"1"}
+Completed in 1373ms (View: 0, DB: 1) | 200 OK [http://localhost/scan/followed/?page=1]
+
+
+Processing ScanController#followed (for 127.0.0.1 at 2010-01-02 19:44:30) [GET]
+  Session ID: 6993b95f9bb1a259882f94d85689a74d
+  Parameters: {"page"=>"2"}
+Completed in 631ms (View: 0, DB: 0) | 200 OK [http://localhost/scan/followed/?page=2]
+
+
+Processing ScanController#followed (for 127.0.0.1 at 2010-01-02 19:44:31) [GET]
+  Session ID: 6993b95f9bb1a259882f94d85689a74d
+  Parameters: {"page"=>"3"}
+Completed in 774ms (View: 0, DB: 0) | 200 OK [http://localhost/scan/followed/?page=3]
+
+
+Processing ScanController#followed (for 127.0.0.1 at 2010-01-02 19:44:32) [GET]
+  Session ID: 6993b95f9bb1a259882f94d85689a74d
+  Parameters: {"page"=>"4"}
+Completed in 1068ms (View: 0, DB: 0) | 200 OK [http://localhost/scan/followed/?page=4]
+
+
+Processing ScanController#followed (for 127.0.0.1 at 2010-01-02 19:44:33) [GET]
+  Session ID: 6993b95f9bb1a259882f94d85689a74d
+  Parameters: {"page"=>"5"}
+Completed in 9263ms (View: 0, DB: 0) | 200 OK [http://localhost/scan/followed/?page=5]
+
+
+Processing DefaultController#index (for 127.0.0.1 at 2010-01-02 19:44:48) [GET]
+  Session ID: 6993b95f9bb1a259882f94d85689a74d
+Rendering template within layouts/application
+Rendering default/index
+Rendered layouts/_choices (0.1ms)
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing DefaultController#index (for 127.0.0.1 at 2010-01-02 19:45:28) [GET]
+  Session ID: 6993b95f9bb1a259882f94d85689a74d
+Rendering template within layouts/application
+Rendering default/index
+Rendered layouts/_choices (0.1ms)
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing DefaultController#index (for 127.0.0.1 at 2010-01-02 19:45:35) [GET]
+  Session ID: 6993b95f9bb1a259882f94d85689a74d
+Rendering template within layouts/application
+Rendering default/index
+Rendered layouts/_choices (0.1ms)
+Completed in 66ms (View: 65, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ScanController#single (for 127.0.0.1 at 2010-01-02 20:02:17) [GET]
+  Session ID: 6993b95f9bb1a259882f94d85689a74d
+  Parameters: {"id"=>"unladenfollow"}
+Rendering template within layouts/application
+Rendering scan/single
+Rendered layouts/_choices (0.2ms)
+Completed in 7ms (View: 5, DB: 0) | 200 OK [http://localhost/u/unladenfollow]
+
+
+Processing ScanController#user (for 127.0.0.1 at 2010-01-02 20:02:17) [GET]
+  Session ID: 6993b95f9bb1a259882f94d85689a74d
+  Parameters: {"u"=>"unladenfollow"}
+Completed in 288ms (View: 0, DB: 1) | 200 OK [http://localhost/scan/user/?u=unladenfollow]

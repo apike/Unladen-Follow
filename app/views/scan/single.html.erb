@@ -5,18 +5,40 @@
 <div id='results'>
     <div id='tlu'><%= image_tag "loader.gif", :id => "loader" %></div>
 
-    <div style='float: right; text-align: right'>
-     <img id='avatar' src=''><br>
-     <a id='link' href='#'></a>
-    </div>
-
     <table id='single_results'>
-        <tr><td><%= image_tag "icons/count.png" %></td><td>Quantity</td><td id='volume'>-</td></tr>
-        <tr><td><%= image_tag "icons/hashes.png" %></td><td>Hashtags</td><td id='hashes'>-</td></tr>
-        <tr><td><%= image_tag "icons/links.png" %></td><td>Links</td><td id='links'>-</td></tr>
-        <tr><td><%= image_tag "icons/mentions.png" %></td><td>Mentions</td><td id='mentions'>-</td></tr>
-        <tr><td><%= image_tag "icons/meta.png" %></td><td>Metadiscussion</td><td id='meta'>-</td></tr>
+        <tr>
+            <td><%= image_tag "icons/count.png" %></td>
+            <td>Quantity</td>
+            <td id='volume'>-</td>
+            <td id='breeze'>Breeze</td>
+        </tr>
+        <tr>
+            <td><%= image_tag "icons/hashes.png" %></td>
+            <td>Hashtags</td>
+            <td id='hashes'>-</td>
+            <td id='wind'>Wind</td>
+        </tr>
+        <tr>
+            <td><%= image_tag "icons/links.png" %></td>
+            <td>Links</td>
+            <td id='links'>-</td>
+            <td id='gale'>Gale</td>
+        </tr>
+        <tr>
+            <td><%= image_tag "icons/mentions.png" %></td>
+            <td>Mentions</td>
+            <td id='mentions'>-</td>
+            <td id='storm'>Storm</td>
+        </tr>
+        <tr>
+            <td><%= image_tag "icons/meta.png" %></td>
+            <td>Metadiscussion</td>
+            <td id='meta'>-</td>
+            <td id='hurricane'>Hurricane</td>
+        </tr>
     </table>
+    
+    <p id='link'></p>
     
     <p id='weeks'><br></p>
 </div>
@@ -26,5 +48,5 @@
 <%= render :partial => 'layouts/choices' %>
 
 <script>
-    Unladen.get_user("<%= @user %>");
+    Unladen.go_single("<%= @user %>");
 </script>

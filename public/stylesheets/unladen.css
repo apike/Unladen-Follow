@@ -198,12 +198,31 @@ input.login {
     display: none;
 }
 
+#single_results {
+    width: 100%;
+}
+
 #single_results tr td:first-child {
     padding-right: 10px;
 }
 
-#single_results tr td:last-child {
+#single_results tr td:nth-child(3) {
     padding-left: 15px;
     text-align: right;
     font-weight: bold;
+}
+
+#single_results tr td:last-child {
+    text-align: right;
+    width: 100%;
+    color: #666;
+}
+
+#single_results tr td.on {
+    font-weight: bold;
+    color: #000;
+}
+
+#single_results #hurricane.on {
+    color: #A00;
 }

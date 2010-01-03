@@ -2,30 +2,19 @@ v2:
 - Simulate follow
 - Linkable Single-user page
 - Ignore @replies completely
+- Logout
 
-- Deal with "you are not autenticated" for protected user pages
-- Logout?
-- Handle simulate errors
 - Code cleanup
-- Polish user page
-- Clean up icons on scan page
 - In-app unfollow?
-- Get a more realistic Scoble rating. One Scoble is 250 TWU (As of November 29, 2009 with 4 weeks of data), 394 (As of December 2, how did that happen?)
+- Get a more realistic Scoble rating. One Scoble is 446 TWU (As of December 31, 2009), 394 (As of December 2, how did that happen?)
 
-New Scoble rating: 446.1 on Dec 31, 2009 at 1:47AM.     
+New Scoble rating: 446.1 on Dec 31, 2009 at 1:47AM.
 
-- More visual feedback on who sucks (rating system?)
-Beaufort scale
--- 10: Breeze
--- 25: Wind
--- 50: Gale
--- 100: Storm
--- 200: Tornado
--- 400: Hurricane
-
+- Rating system on scan page
+- Link to profile on scan pagee
+- Clean up icons on scan page
 - Jump to compare from a user page
-- Contextual footer links
-- Retry when queries take 5 seconds or so
+- Retry when queries take 5 seconds or so or there's a 5XX.
 - Cache user results
 - Stop paging back based on slowness or reaching one week
 - Subtract TLU if they're @mentioning you
