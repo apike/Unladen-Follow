@@ -6,6 +6,8 @@ ActionController::Routing::Routes.draw do |map|
   # Keep in mind you can assign values other than :controller and :action
 
   map.connect 'about', :controller => 'default', :action => 'about'
+  map.connect 'anatomy', :controller => 'default', :action => 'anatomy'
+  map.connect 'logout', :controller => 'default', :action => 'logout'
   map.connect 'u/:id', :controller => 'scan', :action => 'single'
 
 

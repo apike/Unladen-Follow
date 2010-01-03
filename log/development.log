@@ -39806,3 +39806,190 @@ Processing ScanController#user (for 127.0.0.1 at 2010-01-02 20:02:17) [GET]
   Session ID: 6993b95f9bb1a259882f94d85689a74d
   Parameters: {"u"=>"unladenfollow"}
 Completed in 288ms (View: 0, DB: 1) | 200 OK [http://localhost/scan/user/?u=unladenfollow]
+
+
+Processing DefaultController#anatomy (for 127.0.0.1 at 2010-01-02 21:47:57) [GET]
+  Session ID: 6993b95f9bb1a259882f94d85689a74d
+Rendering template within layouts/application
+Rendering default/anatomy
+Rendered layouts/_choices (0.2ms)
+Completed in 11ms (View: 9, DB: 0) | 200 OK [http://localhost/default/anatomy]
+
+
+Processing DefaultController#anatomy (for 127.0.0.1 at 2010-01-02 21:48:17) [GET]
+  Session ID: 6993b95f9bb1a259882f94d85689a74d
+Rendering template within layouts/application
+Rendering default/anatomy
+Rendered layouts/_choices (0.1ms)
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://localhost/default/anatomy]
+
+
+Processing DefaultController#anatomy (for 127.0.0.1 at 2010-01-02 21:49:12) [GET]
+  Session ID: 6993b95f9bb1a259882f94d85689a74d
+Rendering template within layouts/application
+Rendering default/anatomy
+Rendered layouts/_choices (0.1ms)
+Completed in 92ms (View: 7, DB: 0) | 200 OK [http://localhost/default/anatomy]
+
+
+Processing DefaultController#anatomy (for 127.0.0.1 at 2010-01-02 21:49:34) [GET]
+  Session ID: 6993b95f9bb1a259882f94d85689a74d
+Rendering template within layouts/application
+Rendering default/anatomy
+Rendered layouts/_choices (0.1ms)
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://localhost/default/anatomy]
+
+
+Processing DefaultController#anatomy (for 127.0.0.1 at 2010-01-02 21:49:59) [GET]
+  Session ID: 6993b95f9bb1a259882f94d85689a74d
+Rendering template within layouts/application
+Rendering default/anatomy
+Rendered layouts/_choices (0.1ms)
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://localhost/default/anatomy]
+
+
+Processing DefaultController#anatomy (for 127.0.0.1 at 2010-01-02 21:50:04) [GET]
+  Session ID: 6993b95f9bb1a259882f94d85689a74d
+Rendering template within layouts/application
+Rendering default/anatomy
+Rendered layouts/_choices (0.1ms)
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://localhost/default/anatomy]
+
+
+Processing DefaultController#anatomy (for 127.0.0.1 at 2010-01-02 21:50:09) [GET]
+  Session ID: 6993b95f9bb1a259882f94d85689a74d
+Rendering template within layouts/application
+Rendering default/anatomy
+Rendered layouts/_choices (0.1ms)
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://localhost/default/anatomy]
+
+
+Processing DefaultController#index (for 127.0.0.1 at 2010-01-02 21:51:51) [GET]
+  Session ID: 6993b95f9bb1a259882f94d85689a74d
+Rendering template within layouts/application
+Rendering default/index
+Rendered layouts/_choices (0.1ms)
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing DefaultController#anatomy (for 127.0.0.1 at 2010-01-02 21:51:53) [GET]
+  Session ID: 6993b95f9bb1a259882f94d85689a74d
+Rendering template within layouts/application
+Rendering default/anatomy
+Rendered layouts/_choices (0.1ms)
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://localhost/anatomy/]
+
+
+Processing DefaultController#about (for 127.0.0.1 at 2010-01-02 21:51:56) [GET]
+  Session ID: 6993b95f9bb1a259882f94d85689a74d
+Rendering template within layouts/application
+Rendering default/about
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/about/]
+
+
+Processing DefaultController#anatomy (for 127.0.0.1 at 2010-01-02 21:51:59) [GET]
+  Session ID: 6993b95f9bb1a259882f94d85689a74d
+Rendering template within layouts/application
+Rendering default/anatomy
+Rendered layouts/_choices (0.1ms)
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://localhost/anatomy/]
+
+
+Processing DefaultController#about (for 127.0.0.1 at 2010-01-02 21:52:02) [GET]
+  Session ID: 6993b95f9bb1a259882f94d85689a74d
+Rendering template within layouts/application
+Rendering default/about
+Completed in 5ms (View: 2, DB: 0) | 200 OK [http://localhost/about/]
+
+
+Processing DefaultController#index (for 127.0.0.1 at 2010-01-02 21:52:04) [GET]
+  Session ID: 6993b95f9bb1a259882f94d85689a74d
+Rendering template within layouts/application
+Rendering default/index
+Rendered layouts/_choices (0.1ms)
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing DefaultController#index (for 127.0.0.1 at 2010-01-02 21:52:47) [GET]
+  Session ID: 6993b95f9bb1a259882f94d85689a74d
+Rendering template within layouts/application
+Rendering default/index
+Rendered layouts/_choices (0.1ms)
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing DefaultController#index (for 127.0.0.1 at 2010-01-02 21:52:49) [GET]
+  Session ID: 6993b95f9bb1a259882f94d85689a74d
+Rendering template within layouts/application
+Rendering default/index
+Rendered layouts/_choices (0.1ms)
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing DefaultController#about (for 127.0.0.1 at 2010-01-02 21:52:52) [GET]
+  Session ID: 6993b95f9bb1a259882f94d85689a74d
+Rendering template within layouts/application
+Rendering default/about
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/about/]
+
+
+Processing DefaultController#index (for 127.0.0.1 at 2010-01-02 21:52:54) [GET]
+  Session ID: 6993b95f9bb1a259882f94d85689a74d
+Rendering template within layouts/application
+Rendering default/index
+Rendered layouts/_choices (0.1ms)
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing DefaultController#anatomy (for 127.0.0.1 at 2010-01-02 21:52:57) [GET]
+  Session ID: 6993b95f9bb1a259882f94d85689a74d
+Rendering template within layouts/application
+Rendering default/anatomy
+Rendered layouts/_choices (0.1ms)
+Completed in 5ms (View: 3, DB: 0) | 200 OK [http://localhost/anatomy/]
+
+
+Processing DefaultController#logout (for 127.0.0.1 at 2010-01-02 21:52:59) [GET]
+  Session ID: 6993b95f9bb1a259882f94d85689a74d
+Redirected to /
+Completed in 6ms (DB: 1) | 302 Found [http://localhost/logout/]
+
+
+Processing DefaultController#index (for 127.0.0.1 at 2010-01-02 21:52:59) [GET]
+  Session ID: c02a8de23926c326c8ff19e4469e2eec
+Rendering template within layouts/application
+Rendering default/index
+Rendered layouts/_choices (0.3ms)
+Completed in 71ms (View: 70, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing DefaultController#login (for 127.0.0.1 at 2010-01-02 21:53:01) [GET]
+  Session ID: c02a8de23926c326c8ff19e4469e2eec
+Redirected to http://twitter.com/oauth/authorize?oauth_token=Q0tobxWeSbY7uUjHBoTIf25N8Kt0vPkN1a0pkIUo
+Completed in 171ms (DB: 0) | 302 Found [http://localhost/default/login/]
+
+
+Processing DefaultController#oauth (for 127.0.0.1 at 2010-01-02 21:53:03) [GET]
+  Session ID: c02a8de23926c326c8ff19e4469e2eec
+  Parameters: {"oauth_token"=>"Q0tobxWeSbY7uUjHBoTIf25N8Kt0vPkN1a0pkIUo", "oauth_verifier"=>"Ie37lNN64oKZKxxkRhwF9hKK21L9ejAlbYY6l7ZcnZo"}
+Redirected to /scan/
+Completed in 209ms (DB: 0) | 302 Found [http://localhost/default/oauth/?oauth_token=Q0tobxWeSbY7uUjHBoTIf25N8Kt0vPkN1a0pkIUo&oauth_verifier=Ie37lNN64oKZKxxkRhwF9hKK21L9ejAlbYY6l7ZcnZo]
+
+
+Processing ScanController#index (for 127.0.0.1 at 2010-01-02 21:53:03) [GET]
+  Session ID: c02a8de23926c326c8ff19e4469e2eec
+Rendering template within layouts/application
+Rendering scan/index
+Completed in 5ms (View: 4, DB: 0) | 200 OK [http://localhost/scan/]
+
+
+Processing ScanController#followed (for 127.0.0.1 at 2010-01-02 21:53:03) [GET]
+  Session ID: c02a8de23926c326c8ff19e4469e2eec
+  Parameters: {"page"=>"1"}
+Completed in 5139ms (View: 0, DB: 0) | 200 OK [http://localhost/scan/followed/?page=1]
+
+
+Processing ScanController#followed (for 127.0.0.1 at 2010-01-02 21:53:08) [GET]
+  Session ID: c02a8de23926c326c8ff19e4469e2eec
+  Parameters: {"page"=>"2"}
+Completed in 1475ms (View: 0, DB: 0) | 200 OK [http://localhost/scan/followed/?page=2]
