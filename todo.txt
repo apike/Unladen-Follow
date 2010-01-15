@@ -3,25 +3,21 @@ v2:
 - Linkable Single-user page
 - Ignore @replies completely
 - Logout
+- Show less of the list
+- New Scoble rating
+- Anatomy of an annoying tweet
 
-- Code cleanup
-- In-app unfollow?
-- Show less of the list?
-
-New Scoble rating: 446.1 on Dec 31, 2009 at 1:47AM.
-
-- Rating system on scan page
-- Link to profile on scan pagee
+v3?:
+- In-app unfollow
+- Error resistance (retrying and giving up gracefully)
+- Beaufort on scan page
+- "What if" link on profile page, or maybe automatically when you profile -> scan
 - CSRF for API
 - Clean up icons on scan page
-- Jump to compare from a user page
 - Retry when queries take 5 seconds or so or there's a 5XX.
 - Cache user results (maybe etags are sufficient)
-- Stop paging back based on slowness or reaching one week
 - Subtract TLU if they're @mentioning you
 - Let them query more tweets for more accuracy
-- Anatomy of an annoying tweet
 - RT penalizing/counting
 - Be lenient on native retweets
 - Sorting by Javascript
-
