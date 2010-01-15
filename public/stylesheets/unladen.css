@@ -242,3 +242,7 @@ input.login {
 #anatomy {
     margin: 2em 0px;
 }
+
+#results.scan {
+    display: none;
+}

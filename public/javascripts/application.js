@@ -1,10 +1,12 @@
 // Copyright Allen Pike.
 // 
 
-
 var Unladen = {
     
+    ///////////////////////////////////////////////////////////////////////////////////////////////////
     // Constants
+    ///////////////////////////////////////////////////////////////////////////////////////////////////
+
     CONTACT_STRING: "<p>Please try again, or you can <a href='http://www.antipode.ca/contact/'>contact me</a>.</p>",
     METRICS: {
         "count": 1,
@@ -40,7 +42,10 @@ var Unladen = {
     
     SCOBLE_TLU: 446,
     
-    // Class variables
+    ///////////////////////////////////////////////////////////////////////////////////////////////////
+    // Members
+    ///////////////////////////////////////////////////////////////////////////////////////////////////
+
     used_messages: {},
     simulated_users: [],
     users: {},
@@ -49,35 +54,106 @@ var Unladen = {
     current_page: 1,
     initial_weeks_of_data: null,
     single_mode: false,
+
+    ///////////////////////////////////////////////////////////////////////////////////////////////////
+    // Entry Points
+    ///////////////////////////////////////////////////////////////////////////////////////////////////
+    
+    // Entry point for user profile
+    go_single: function(user) {
+        this.single_mode = true;
+        this.get_user(user);
+    },
+    
+    // Jump from homepage to a user
+    go_user_jump: function() {
+        window.location = "/u/" + $("#jumpto").val();
+
+        return false;
+    },
+    
+    // Entry point for simulating a user
+    go_simulate: function() {
+        $('#simulate_spinner').css('display', 'inline');
+
+        this.get_user($('#simulate').val(), true);
+        this.show_all();
+        return false; // Stop form from going
+    },    
+
+    ///////////////////////////////////////////////////////////////////////////////////////////////////
+    // Controller
+    ///////////////////////////////////////////////////////////////////////////////////////////////////
+    
+    // Get one user, either for simulation or profile
+    get_user: function(user, is_simulation) {
+        user = user.toLowerCase();
+
+        Unladen.simulated_users[user] = true;
+        Unladen.users[user] = false;
+
+        $.getJSON("/scan/user/?u=" + user, {}, function(json) {
+            $('#simulate').val(''); // Clear out simulate value
+            
+            var status = Unladen.process_tweets(json);
+            if (status !== true) {
+                if (is_simulation) {
+                    Unladen.simulate_error(status);
+                } else {
+                    Unladen.load_error(status);
+                }
+            } else {
+                Unladen.process_users();
+            }
+            $('#simulate_spinner').css('display', 'none');
+        });
+    },
+    
+    // Process HTTP error from Twitter for simulate
+    simulate_error: function(status) {
+        var error_message = '';
+        if (status == 401) {
+            error_message = "User is private.";
+        } else if (status == 404) {
+            error_message = "There is no such user.";
+        }
+        else if (status == -1) {
+            error_message = "No tweets.";
+        } else {
+            error_message = "Twitter error #" + status + ".";
+        }
+
+        $('#simulate_error').css('display', 'block'); // make show()
+        $('#simulate_error').html(error_message);
+    },
+    
+    // Process HTTP error from Twitter for scan
+    load_error: function(status) {
+        var error_msg = '';
+        if (status == 401 && this.single_mode) {
+            error_msg = "This user's tweets are private.";
+        } else if (status == 401) {
+            error_msg = "You are not authenticated. <a href='/default/login/'>Please authorize with Twitter here</a>.";
+        } else if (status == -1) {
+            error_msg = "No tweets found. If you follow anybody, this means Twitter is having issues.";
+        } else {
+            error_msg = "We got an error trying to scan your tweets, likely because of Twitter being down. " + this.CONTACT_STRING + "<p>Twitter error #" + status + ".";
+        }
+        Unladen.show_results(error_msg);
+    },
     
     // Return false if we've taken too long or have all the data
     should_keep_going: function() {
         return (new Date() - this.start_time < this.MAX_RUNTIME && this.current_page < this.MAX_PAGES);
     },
 
-    // Let's go for an MVC approach for version 2.
-    display_output: function(html) {
-        $('#results').html(html);
-    },
-
-    // Get a message we haven't used before
-    add_progress_message: function() {
-        var m = null;
-        while (!m || this.used_messages[m]) {
-            m = Math.floor(Math.random(new Date().valueOf()) * this.PROGRESS_MESSAGES.length);
-        }
-        this.used_messages[m] = true;
-        
-        $('#progress').append('<br>' + this.PROGRESS_MESSAGES[m] + " tweets...");
-    },
-
     // Hit the server for more tweets
     get_tweets: function() {
-        this.add_progress_message();
+        this.display_progress_message();
         
         $("body").ajaxError(function(event, request, settings){
             console.log(request);
-            Unladen.display_output("Unladen Follow fell down!" + Unladen.CONTACT_STRING + "<p>Error " + request.status + ".");
+            Unladen.show_results("Unladen Follow fell down!" + Unladen.CONTACT_STRING + "<p>Error " + request.status + ".");
             return false;
          });
         
@@ -147,28 +223,6 @@ var Unladen = {
         return true;
     },
     
-    // Convert crazy Twitter date format into something parseable.
-    parse_twitter_date: function(string) {
-        //Got: Wed Nov 18 18:36:34 +0000 2009
-        //     0   1   2  3        4     5
-
-        var p = string.split(" ");
-
-        //Convert to: Nov 18 2009 18:36:34 +0000 
-        //            1   2  5    3        4     
-
-        var order = [1, 2, 5, 3, 4];
-        var parseable = [];
-
-        for (i in order) {
-            parseable.push(p[order[i]]);
-        }
-
-        parseable = parseable.join(" ");
-        
-        return new Date(parseable);
-    },
-    
     // Process users for final consumption, now that all JSON calls have been made.
     process_users: function() {
         // How many weeks our oldest result was ago
@@ -221,6 +275,11 @@ var Unladen = {
         }
     },
     
+    ///////////////////////////////////////////////////////////////////////////////////////////////////
+    // View
+    ///////////////////////////////////////////////////////////////////////////////////////////////////
+    
+    // Fill single profile with data
     display_single: function(user, weeks_of_data) {
         $('#tlu').html(this.r10(user["score"]));
         $('#link').attr("href", "");
@@ -240,19 +299,20 @@ var Unladen = {
         $('#' + this.beaufort_scale(user["score"])).addClass("on");
     },
     
+    // Full scan page with data
     display_full_table: function(user_array, total_cost) {
         var html = [];
 
-        html.push('You are laden with <b>' + Math.round(total_cost) + '</b> Tweet Load Units per week.<br>\
-        This is equivalent to following Robert Scoble <b>' + Unladen.r10(total_cost / this.SCOBLE_TLU) + '</b> times.<br>\
-        <a href="/about/">Learn more about Unladen Follow</a>.<br>\
-        \
-        <form id="simulate_form" onsubmit="return Unladen.go_simulate();">\
-            What if I followed <input id="simulate"> ? <img src="/images/loader.gif" id="simulate_spinner">\
-            <p id="simulate_error"></p>\
-        </form>\
-        \
-        <table id="scan">\
+        $("#total_cost").html(Math.round(total_cost));
+        $("#scoble_times").html(Unladen.r10(total_cost / this.SCOBLE_TLU));
+
+        html.column = function(value, className) {
+            this.push('<td ' + (className ? ('class=' + className) : '') + '>' + Math.round(value) + '</td>');
+        };
+        
+        var list_is_truncated = false;
+        
+        html.push('<table id="scan">\
             <tr class="header">\
                 <td>TLU <div>Total Tweet Load Units per Week</div></td>\
                 <td></td>\
@@ -263,14 +323,7 @@ var Unladen = {
                 <td>://<div>Links</div></td>\
                 <td>&#9733;<div>Favourited</div></td>\
             </tr>');
-            
-            
-        html.column = function(value, className) {
-            this.push('<td ' + (className ? ('class=' + className) : '') + '>' + Math.round(value) + '</td>');
-        };
-        
-        var list_is_truncated = false;
-        
+
         for (key in user_array) {
             user = user_array[key];
             
@@ -278,8 +331,6 @@ var Unladen = {
             if (Unladen.simulated_users[user["name"]]) {
                 className = 'simulated';
             }
-            
-            
             
             if (key >= 10 && Unladen.simulated_users.length == 0) {
                 // No long-tail hiding when you simulate users
@@ -302,24 +353,53 @@ var Unladen = {
         
         html.push('</table>');
         
-        if (list_is_truncated) {
-            html.push('<p id="show_all"><a href="javascript:;" onclick="Unladen.show_all();">Show everybody else</a>.</p>');
+        $('#scan_wrapper').html(html.join(''));
+        
+        
+        if (!list_is_truncated) {
+            this.show_all();
         }
         
-        html.push('<p>Numbers estimated from <b>' + this.r10(this.initial_weeks_of_data) + '</b> weeks of data.<br>\
-            For more accuracy, unfollow some and run again, or click through to a user\'s detail page.</p>');
+        $('#weeks_of_data').html(this.r10(this.initial_weeks_of_data));
         
-        this.display_output(html.join(''));
+        this.show_results();
     },
-    
-    // Rounds to 10ths place.
-    r10: function(input) {
-        return Math.round(input * 10) / 10;
+
+    // Get a message we haven't used before
+    display_progress_message: function() {
+        var m = null;
+        while (!m || this.used_messages[m]) {
+            m = Math.floor(Math.random(new Date().valueOf()) * this.PROGRESS_MESSAGES.length);
+        }
+        this.used_messages[m] = true;
+        
+        $('#progress').append('<br>' + this.PROGRESS_MESSAGES[m] + " tweets...");
+    },
+        
+
+    // Flip the View switch. (Could use more MVC-ness now.)
+    show_results: function(html) {
+        $('#loading').hide();
+        $('#results').show();
+        
+        if (html) {
+            // If no HTML, the results have been built in #results
+            $('#results').html(html);
+        }
     },
     
     // Display the "long tail" results
     show_all: function() {
         $("body").addClass("all_mode");
+    },
+        
+    ///////////////////////////////////////////////////////////////////////////////////////////////////
+    // Utility
+    ///////////////////////////////////////////////////////////////////////////////////////////////////
+    
+    // Rounds to 10ths place.
+    r10: function(input) {
+        return Math.round(input * 10) / 10;
     },
     
     // Return how many of a needle string are in a haystack
@@ -334,6 +414,28 @@ var Unladen = {
         
         return count;
     },
+
+    // Convert crazy Twitter date format into something parseable.
+    parse_twitter_date: function(string) {
+        //Got: Wed Nov 18 18:36:34 +0000 2009
+        //     0   1   2  3        4     5
+
+        var p = string.split(" ");
+
+        //Convert to: Nov 18 2009 18:36:34 +0000 
+        //            1   2  5    3        4     
+
+        var order = [1, 2, 5, 3, 4];
+        var parseable = [];
+
+        for (i in order) {
+            parseable.push(p[order[i]]);
+        }
+
+        parseable = parseable.join(" ");
+        
+        return new Date(parseable);
+    },
     
     // Fill a user object with empty data
     reset_user: function(user) {
@@ -342,80 +444,7 @@ var Unladen = {
         }
     },
     
-    // User page
-    get_user: function(user, is_simulation) {
-        user = user.toLowerCase();
-        console.log(user);
-        Unladen.simulated_users[user] = true;
-        Unladen.users[user] = false;
-
-        $.getJSON("/scan/user/?u=" + user, {}, function(json) {
-            var status = Unladen.process_tweets(json);
-            if (status !== true) {
-                if (is_simulation) {
-                    Unladen.simulate_error(status);
-                } else {
-                    Unladen.load_error(status);
-                }
-            } else {
-                Unladen.process_users();
-            }
-            $('#simulate_spinner').css('display', 'none');
-        });
-    },
-    
-    load_error: function(status) {
-        var error_msg = '';
-        if (status == 401 && this.single_mode) {
-            error_msg = "This user's tweets are private.";
-        } else if (status == 401) {
-            error_msg = "You are not authenticated. <a href='/default/login/'>Please authorize with Twitter here</a>.";
-        } else if (status == -1) {
-            error_msg = "No tweets found. If you follow anybody, this means Twitter is having issues.";
-        } else {
-            error_msg = "We got an error trying to scan your tweets, likely because of Twitter being down. " + this.CONTACT_STRING + "<p>Twitter error #" + status + ".";
-        }
-        Unladen.display_output(error_msg);
-    },
-    
-    simulate_error: function(status) {
-        var error_message = '';
-        if (status == 401) {
-            error_message = "User is private.";
-        } else if (status == 404) {
-            error_message = "There is no such user.";
-        }
-        else if (status == -1) {
-            error_message = "No tweets.";
-        } else {
-            error_message = "Twitter error #" + status + ".";
-        }
-
-        $('#simulate_error').css('display', 'block'); // make show()
-        $('#simulate_error').html(error_message);
-    },
-    
-    go_simulate: function() {
-        $('#simulate_spinner').css('display', 'inline');
-
-        this.get_user($('#simulate').val(), true);
-        this.show_all();
-        return false; // Stop form from going
-    },
-    
-    go_single: function(user) {
-        this.single_mode = true;
-        this.get_user(user);
-    },
-    
-    user_jump: function() {
-        // Jump from homepage to a user
-
-        window.location = "/u/" + $("#jumpto").val();
-
-        return false;
-    },
-    
+    // Describe a TLU in English
     beaufort_scale: function(tlu) {
         if (tlu < 10 ) {
             return "breeze";
