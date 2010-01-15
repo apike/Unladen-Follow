@@ -22,7 +22,7 @@ class ScanController < ApplicationController
     user = params[:u]
 
     # Test for invalid twitter username
-    if (!user || user =~ /[^a-z0-9_]+/i)
+    if !is_valid_username(user)
       render :text => "{twitter_error: 'Invalid username.'}"
     else
       twitter_request("/statuses/user_timeline/" + user + ".json", false)
@@ -30,9 +30,28 @@ class ScanController < ApplicationController
     
   end
   
+  def unfollow
+    user = params[:u]
+    
+    # Test for invalid twitter username
+    if !is_valid_username(user)
+      render :text => "{twitter_error: 'Invalid username.'}"
+    else
+      twitter_request("/friendships/destroy/" + user + ".json", true, true)
+    end
+  end
+  
   private
   
-  def twitter_request(method, needs_auth)
+  def is_valid_username(user)
+    if (!user || user =~ /[^a-z0-9_]+/i)
+      return false
+    else
+      return true
+    end
+  end
+  
+  def twitter_request(method, needs_auth = false, needs_post = false)
       page_size = 200
       timeout = 20
       
@@ -42,10 +61,16 @@ class ScanController < ApplicationController
       end
       
       begin
-        req = Net::HTTP::Get.new(method + "?count=#{page_size}&page=#{page}")
+        method = 
+        
+        if (needs_post)
+          req = Net::HTTP::Post.new(method)
+        else
+          req = Net::HTTP::Get.new(method + "?count=#{page_size}&page=#{page}")
+        end
     
         if (needs_auth)
-          consumer = OAuth::Consumer.new('kU9aUc0zXGTRMd1oyknjyg', 'LgLlHSCN27Rs5fTwAoxEFUc2MFAp3VGAdwjaGsRVws', {:site => 'http://twitter.com'})
+          consumer = OAuth::Consumer.new('8bKm7x1kEgeYDLyzdgLw', 'wcetbJFxNSb2IRjq4zcqJeUA058LhTUO5hgR5g', {:site => 'http://twitter.com'})
           access_token = OAuth::AccessToken.new(consumer, session[:oauth_token], session[:oauth_secret])
           consumer.sign!(req, access_token)      
         end

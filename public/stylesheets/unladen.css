@@ -110,6 +110,18 @@ input.login {
     background-color: #faf4f2;
 }
 
+#scan tr.long_tail {
+    display: none;
+}
+
+.all_mode #scan tr.long_tail {
+    display: table-row;
+}
+
+.all_mode #show_all {
+    display: none;
+}
+
 #scan tr.simulated td {
     background-color: #e56532;
     color: white;
@@ -215,7 +227,7 @@ input.login {
 #single_results tr td:last-child {
     text-align: right;
     width: 100%;
-    color: #666;
+    color: #999;
 }
 
 #single_results tr td.on {

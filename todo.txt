@@ -6,22 +6,22 @@ v2:
 
 - Code cleanup
 - In-app unfollow?
-- Get a more realistic Scoble rating. One Scoble is 446 TWU (As of December 31, 2009), 394 (As of December 2, how did that happen?)
+- Show less of the list?
 
 New Scoble rating: 446.1 on Dec 31, 2009 at 1:47AM.
 
 - Rating system on scan page
 - Link to profile on scan pagee
+- CSRF for API
 - Clean up icons on scan page
 - Jump to compare from a user page
 - Retry when queries take 5 seconds or so or there's a 5XX.
-- Cache user results
+- Cache user results (maybe etags are sufficient)
 - Stop paging back based on slowness or reaching one week
 - Subtract TLU if they're @mentioning you
 - Let them query more tweets for more accuracy
 - Anatomy of an annoying tweet
 - RT penalizing/counting
 - Be lenient on native retweets
-- Show less of the list?
 - Sorting by Javascript
 

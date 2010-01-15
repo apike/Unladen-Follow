@@ -59,8 +59,8 @@ class DefaultController < ApplicationController
   
   def get_consumer
     OAuth::Consumer.new(
-      'kU9aUc0zXGTRMd1oyknjyg', 
-      'LgLlHSCN27Rs5fTwAoxEFUc2MFAp3VGAdwjaGsRVws', 
+      '8bKm7x1kEgeYDLyzdgLw', 
+      'wcetbJFxNSb2IRjq4zcqJeUA058LhTUO5hgR5g', 
       {:site => 'http://twitter.com'}
     )
   end

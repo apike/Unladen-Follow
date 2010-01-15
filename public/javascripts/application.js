@@ -42,7 +42,7 @@ var Unladen = {
     
     // Class variables
     used_messages: {},
-    simulated_users: {},
+    simulated_users: [],
     users: {},
     oldest_result: null,
     start_time: new Date(),
@@ -225,7 +225,7 @@ var Unladen = {
         $('#tlu').html(this.r10(user["score"]));
         $('#link').attr("href", "");
         
-        var link_url = 'http://www.twitter.com/' +  + user["name"];
+        var link_url = 'http://www.twitter.com/' + user["name"];
         var link_text = (user["real_name"] || user["name"]) + "'s Twitter profile";
         $('#link').html("<a href='" + link_url + "'>" + link_text + "</a>.");
 
@@ -269,17 +269,25 @@ var Unladen = {
             this.push('<td ' + (className ? ('class=' + className) : '') + '>' + Math.round(value) + '</td>');
         };
         
+        var list_is_truncated = false;
+        
         for (key in user_array) {
             user = user_array[key];
             
-            var class_part = '';
+            var className = '';
             if (Unladen.simulated_users[user["name"]]) {
-                class_part = ' class="simulated"';
-            } else {
-                class_part = ' class="qqq"';
+                className = 'simulated';
             }
             
-            html.push('<tr' + class_part + '>');
+            
+            
+            if (key >= 10 && Unladen.simulated_users.length == 0) {
+                // No long-tail hiding when you simulate users
+                className += ' long_tail';
+                list_is_truncated = true;
+            }
+            
+            html.push('<tr class="' + className + '">');
             html.column(user["score"], 'score');
             html.push('<td class="user"><a href="/u/' + user["name"] + '">' + user["name"] + '</td>');
             html.column(user["count"]);
@@ -292,9 +300,14 @@ var Unladen = {
             
         }
         
-        html.push('</table>\
-            Numbers estimated from <b>' + this.r10(this.initial_weeks_of_data) + '</b> weeks of data.<br>\
-            For more accuracy, unfollow some and run again, or click through to a user\'s detail page.');
+        html.push('</table>');
+        
+        if (list_is_truncated) {
+            html.push('<p id="show_all"><a href="javascript:;" onclick="Unladen.show_all();">Show everybody else</a>.</p>');
+        }
+        
+        html.push('<p>Numbers estimated from <b>' + this.r10(this.initial_weeks_of_data) + '</b> weeks of data.<br>\
+            For more accuracy, unfollow some and run again, or click through to a user\'s detail page.</p>');
         
         this.display_output(html.join(''));
     },
@@ -302,6 +315,11 @@ var Unladen = {
     // Rounds to 10ths place.
     r10: function(input) {
         return Math.round(input * 10) / 10;
+    },
+    
+    // Display the "long tail" results
+    show_all: function() {
+        $("body").addClass("all_mode");
     },
     
     // Return how many of a needle string are in a haystack
@@ -327,6 +345,7 @@ var Unladen = {
     // User page
     get_user: function(user, is_simulation) {
         user = user.toLowerCase();
+        console.log(user);
         Unladen.simulated_users[user] = true;
         Unladen.users[user] = false;
 
@@ -380,6 +399,7 @@ var Unladen = {
         $('#simulate_spinner').css('display', 'inline');
 
         this.get_user($('#simulate').val(), true);
+        this.show_all();
         return false; // Stop form from going
     },
     
