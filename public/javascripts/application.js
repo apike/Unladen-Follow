@@ -112,12 +112,15 @@ var Unladen = {
     // Process HTTP error from Twitter for simulate
     simulate_error: function(status) {
         var error_message = '';
+        console.log(status);
+        
         if (status == 401) {
             error_message = "User is private.";
         } else if (status == 404) {
             error_message = "There is no such user.";
-        }
-        else if (status == -1) {
+        } else if (status == 400) {
+            error_message = "Twitter is rate limiting us. (They are likely over capacity.)";
+        } else if (status == -1) {
             error_message = "No tweets.";
         } else {
             error_message = "Twitter error #" + status + ".";
@@ -134,6 +137,8 @@ var Unladen = {
             error_msg = "This user's tweets are private.";
         } else if (status == 401) {
             error_msg = "You are not authenticated. <a href='/default/login/'>Please authorize with Twitter here</a>.";
+        } else if (status == 400) {
+            error_msg = "Twitter is rate limiting us, which shouldn't happen because we're whitelisted. " + this.CONTACT_STRING;
         } else if (status == -1) {
             error_msg = "No tweets found. If you follow anybody, this means Twitter is having issues.";
         } else {
@@ -204,6 +209,8 @@ var Unladen = {
                 current_user["image"] = tweet.user.profile_image_url;
                 current_user["real_name"] = tweet.user.name;
             }
+            
+            // Add up the user's score from the various factors.
                         
             current_user["count"] += 1;
             current_user["favorited"] += tweet.favorited ? 1 : 0;

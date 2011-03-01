@@ -1,6 +1,10 @@
 class DefaultController < ApplicationController
   def index
   end
+  
+  def anatomy
+    @title = "Anatomy of an Annoying Tweet"
+  end
 
   def login
     require 'oauth'

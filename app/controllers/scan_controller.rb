@@ -9,6 +9,7 @@ class ScanController < ApplicationController
   def single
     # User page
     @user = params[:id]
+    @title = 'Profile for ' + @user 
   end
   
   def followed
