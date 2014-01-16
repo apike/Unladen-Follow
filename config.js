@@ -1,9 +1,9 @@
 module.exports = {
-  'HOSTPATH': 'http://your.host.here',
-  'PORT': 80,
-  'EXPRESS_SESSION_SECRET': '123456',
-  'TWITTER_CONSUMER_KEY': 'your-consumer-key-here',
-  'TWITTER_CONSUMER_SECRET': 'your-secret-here',
+  'HOSTPATH': 'http://localhost:3000',
+  'PORT': 3000,
+  'EXPRESS_SESSION_SECRET': 'djkdjbdkdbkdjbjk',
+  'TWITTER_CONSUMER_KEY': '8bKm7x1kEgeYDLyzdgLw',
+  'TWITTER_CONSUMER_SECRET': 'wcetbJFxNSb2IRjq4zcqJeUA058LhTUO5hgR5g',
   'GOOGLE_APP_ID': 'your-app-id-here',
   'GOOGLE_CONSUMER_SECRET': 'your-consumer-secret-here',
 };
