@@ -2,6 +2,7 @@
 var express = require('express')
   , routes = require('./routes')
   , user = require('./routes/user')
+  , scan = require('./routes/scan')
   , http = require('http')
   , path = require('path');
  
@@ -75,10 +76,14 @@ app.get('/sessions/callback', function(req, res){
   sys.puts("oauthRequestToken>>"+req.session.oauthRequestToken);
   sys.puts("oauthRequestTokenSecret>>"+req.session.oauthRequestTokenSecret);
   sys.puts("oauth_verifier>>"+req.query.oauth_verifier);
+
+  // Save oAuth verifier
+  req.session.oauthVerifier = req.query.oauth_verifier;
+
   consumer().getOAuthAccessToken(
     req.session.oauthRequestToken, 
     req.session.oauthRequestTokenSecret, 
-    req.query.oauth_verifier, 
+    req.session.oauthVerifier, 
     function(error, oauthAccessToken, oauthAccessTokenSecret, results) { //callback when access_token is ready
     if (error) {
       res.send("Error getting OAuth access token : " + sys.inspect(error), 500);
@@ -100,6 +105,28 @@ app.get('/sessions/callback', function(req, res){
       });  
     }
   });
+});
+
+app.get('/scan', function(req, res) {
+
+  sys.puts("oauthRequestToken>>"+req.session.oauthRequestToken);
+  sys.puts("oauthRequestTokenSecret>>"+req.session.oauthRequestTokenSecret);
+  sys.puts("oauth_verifier>>"+req.session.oauthVerifier);
+
+
+      consumer().get("https://api.twitter.com/1.1/statuses/home_timeline.json", 
+                      req.session.oauthAccessToken, 
+                      req.session.oauthAccessTokenSecret, 
+                      function (error, data, response) {  //callback when the data is ready
+        if (error) {
+          res.send("Error getting twitter screen name : " + sys.inspect(error), 500);
+        } else {
+          //data = JSON.parse(data);
+          //req.session.twitterScreenName = data["screen_name"];  
+          res.json(JSON.parse(data));
+        }  
+      });  
+    
 });
 
  
