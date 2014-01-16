@@ -1,0 +1,13 @@
+<div id='signin'>
+    <% if (isLoggedIn) { %>
+        <a style='float: right' href='/scan/'>Analyze Now</a>
+    <% } else { %> 
+        <a style='float: right' href='/default/login/'><img src="/images/twitter_sign_in.png"></a>
+    <% } %>
+
+    Analyze your followees:
+</div>
+
+<p style='text-align: center; margin: 5px'><i>~or~</i></p>
+
+<div id='signin'><form style='display: inline;float: right' onsubmit='return Unladen.go_user_jump();'><input type='text' id='jumpto' ></form>Analyze one Twitterer: </div>

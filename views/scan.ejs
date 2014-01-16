@@ -1,8 +1,10 @@
-<h1><%= image_tag "heaviest_headline.png" %></h1>
+<% layout('_layout') -%>
+
+<h1><img src="/images/heaviest_headline.png"/></h1>
 
 <div id='loading'>
     <span id='progress'></span>
-    <%= image_tag "loader.gif", :id => "loader" %>
+    <img src="/images/loader.gif" id="loader">
 </div>
 
 <div id='results' class='scan'>

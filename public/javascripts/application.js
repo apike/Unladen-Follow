@@ -17,11 +17,12 @@ var Unladen = {
         "meta": 2
     },
     MAX_RUNTIME: 10000,
-    MAX_PAGES: 10,
+    MAX_PAGES: 8,
     PROGRESS_MESSAGES: [
         "Steeping",
         "Tweeting",
         "Snorgling",
+        "Twerking",
         "Reconstituting",
         "Interpolating",
         "Synergizing",
@@ -162,7 +163,7 @@ var Unladen = {
             return false;
          });
         
-        $.getJSON("/scan/followed/?page=" + this.current_page, {}, function(json) {
+        $.getJSON("/twitter/timeline/" + this.current_page, {}, function(json) {
             var status = Unladen.process_tweets(json);
 			// 502 means Twitter is overloaded.
 			

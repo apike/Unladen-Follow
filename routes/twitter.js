@@ -25,19 +25,31 @@ exports.timeline = function(req, res){
   sys.puts("oauthRequestTokenSecret>>"+req.session.oauthRequestTokenSecret);
   sys.puts("oauth_verifier>>"+req.session.oauthVerifier);
 
+  var page_size = 100;
+  var timeout = 20;
+  var page = req.params.page ? parseInt(req.params.page, 10) : 1;
 
-      consumer().get("https://api.twitter.com/1.1/statuses/home_timeline.json", 
-                      req.session.oauthAccessToken, 
-                      req.session.oauthAccessTokenSecret, 
-                      function (error, data, response) {  //callback when the data is ready
-        if (error) {
-          res.send("Error getting twitter screen name : " + sys.inspect(error), 500);
-        } else {
-          //data = JSON.parse(data);
-          //req.session.twitterScreenName = data["screen_name"];  
-          res.json(JSON.parse(data));
-        }  
-      });  
+  console.log(req.params);
+  console.log(req.params.page);
+  console.log(page);
+
+
+  if (page > 10) {
+    page = 10;
+  }
+
+  consumer().get("https://api.twitter.com/1.1/statuses/home_timeline.json?count=" + page_size + "&page=" + page, 
+                  req.session.oauthAccessToken, 
+                  req.session.oauthAccessTokenSecret, 
+                  function (error, data, response) {  //callback when the data is ready
+    if (error) {
+      res.send("Error getting twitter screen name : " + sys.inspect(error), 500);
+    } else {
+      //data = JSON.parse(data);
+      //req.session.twitterScreenName = data["screen_name"];  
+      res.json(JSON.parse(data));
+    }  
+  });  
 };
 
  
