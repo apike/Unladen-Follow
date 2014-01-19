@@ -8,6 +8,17 @@ exports.index = function(req, res){
 
 };
 
+
+exports.about = function(req, res){
+  res.render('about', { title: 'About Unladen Follow' });
+
+};
+
+exports.anatomy = function(req, res){
+  res.render('anatomy', { title: 'Anatomy of an Annoying Tweet' });
+
+};
+
 exports.scan = function(req, res){
   res.render('scan', { title: 'Unladen Follow' });
 
@@ -16,8 +27,8 @@ exports.scan = function(req, res){
 exports.single = function(req, res){
 
   var whitelist = require('validator').whitelist;
-  var user = whitelist(req.params.user, validUsernameChars);
+  var user = require('./twitter').sanitizeUsername(req.params.user);
 
-  res.render('single', { title: 'Unladen Follow', user: user });
+  res.render('single', { title: 'Unladen Follow profile for ' + user, user: user });
 
 };

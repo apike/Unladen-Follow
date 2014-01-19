@@ -41,7 +41,7 @@ var Unladen = {
         "Volumetrizing"
     ],
     
-    SCOBLE_TLU: 446,
+    GLENNF_TLU: 1000,
     
     ///////////////////////////////////////////////////////////////////////////////////////////////////
     // Members
@@ -93,7 +93,7 @@ var Unladen = {
         Unladen.simulated_users[user] = true;
         Unladen.users[user] = false;
 
-        $.getJSON("/scan/user/?u=" + user, {}, function(json) {
+        $.getJSON("/twitter/user/" + user, {}, function(json) {
             $('#simulate').val(''); // Clear out simulate value
             
             var status = Unladen.process_tweets(json);
@@ -137,7 +137,7 @@ var Unladen = {
         if (status == 401 && this.single_mode) {
             error_msg = "This user's tweets are private.";
         } else if (status == 401) {
-            error_msg = "You are not authenticated. <a href='/default/login/'>Please authorize with Twitter here</a>.";
+            error_msg = "You are not authenticated. <a href='/twitter/connect/'>Please authorize with Twitter here</a>.";
         } else if (status == 400) {
             error_msg = "Twitter is rate limiting us, which shouldn't happen because we're whitelisted. " + this.CONTACT_STRING;
         } else if (status == -1) {
@@ -320,7 +320,7 @@ var Unladen = {
         var html = [];
 
         $("#total_cost").html(Math.round(total_cost));
-        $("#scoble_times").html(Unladen.r10(total_cost / this.SCOBLE_TLU));
+        $("#glennf_times").html(Unladen.r10(total_cost / this.GLENNF_TLU));
 
         html.column = function(value, className) {
             this.push('<td ' + (className ? ('class=' + className) : '') + '>' + Math.round(value) + '</td>');

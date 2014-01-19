@@ -36,8 +36,6 @@ app.configure(function(){
   app.use(express.errorHandler({ dumpExceptions: true, showStack: true }));
 });
 
-var validUsernameChars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890_';
-
 var isLoggedIn = true; // todo: this is wrong
  
 app.get('/', routes.index );
@@ -45,9 +43,12 @@ app.get('/scan', routes.scan);
 app.get('/u/:user', routes.single); 
 app.get('/twitter/timeline', twitter.timeline); 
 app.get('/twitter/timeline/:page', twitter.timeline); 
+app.get('/twitter/user/:user', twitter.user); 
 app.get('/twitter/connect', twitter.connect); 
 app.get('/twitter/callback', twitter.callback); 
  
 
+app.get('/about', routes.about); 
+app.get('/anatomy', routes.anatomy); 
  
 app.listen(parseInt(config.PORT || 3000));

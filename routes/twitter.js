@@ -19,32 +19,36 @@ function consumer() {
    );
 }
 
-exports.user = function(req, res) {
+exports.sanitizeUsername = function(username) {
   var whitelist = require('validator').whitelist;
-  var user = whitelist(req.params.u, validUsernameChars);
-
-  twitter_request("/statuses/user_timeline/" + user + ".json", false);
+  return whitelist(username, 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890_');
 }
 
-exports.timeline = function(req, res){
+var twitterRequest = function(req, res, path, shouldAuth, extraParams) {
   sys.puts("oauthRequestToken>>"+req.session.oauthRequestToken);
   sys.puts("oauthRequestTokenSecret>>"+req.session.oauthRequestTokenSecret);
   sys.puts("oauth_verifier>>"+req.session.oauthVerifier);
+
+  if (extraParams) {
+    extraParams = extraParams + "&"
+  }
 
   var page_size = 100;
   var timeout = 20;
   var page = req.params.page ? parseInt(req.params.page, 10) : 1;
 
   console.log(req.params);
-  console.log(req.params.page);
-  console.log(page);
 
 
   if (page > 10) {
     page = 10;
   }
 
-  consumer().get("https://api.twitter.com/1.1/statuses/home_timeline.json?count=" + page_size + "&page=" + page, 
+  var apiEndpoint = "https://api.twitter.com/1.1" + path + ".json?" + extraParams + "count=" + page_size + "&page=" + page;
+
+  console.log(apiEndpoint);
+
+  consumer().get(apiEndpoint, 
                   req.session.oauthAccessToken, 
                   req.session.oauthAccessTokenSecret, 
                   function (error, data, response) {  //callback when the data is ready
@@ -57,6 +61,16 @@ exports.timeline = function(req, res){
     }  
   });  
 };
+
+exports.user = function(req, res) {
+  var user = exports.sanitizeUsername(req.params.user);
+
+  twitterRequest(req, res, "/statuses/user_timeline", false, "screen_name=" + user);
+}
+
+exports.timeline = function(req, res) {
+  twitterRequest(req, res, "/statuses/home_timeline", true);
+}
 
  
 exports.connect = function(req, res) {
