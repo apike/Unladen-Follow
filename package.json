@@ -9,6 +9,7 @@
     "express": "3.4.*",
     "ejs": "0.8.*",
     "ejs-locals": "1.*",
-    "oauth": "0.9.*"
+    "oauth": "0.9.*",
+    "validator": "3.1.*"
   }
 }

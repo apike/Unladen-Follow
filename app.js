@@ -1,7 +1,6 @@
 
 var express = require('express')
   , routes = require('./routes')
-  , user = require('./routes/user')
   , twitter = require('./routes/twitter')
   , http = require('http')
   , path = require('path');
@@ -21,7 +20,7 @@ app.configure(function(){
   app.engine('ejs', engine);
   app.set('view engine', 'ejs');
 
-  app.use(express.favicon());
+  app.use(express.favicon(__dirname + '/public/favicon.ico'));
   app.use(express.logger('dev'));
   app.use(express.bodyParser());
   app.use(express.methodOverride());
@@ -37,10 +36,13 @@ app.configure(function(){
   app.use(express.errorHandler({ dumpExceptions: true, showStack: true }));
 });
 
-var isLoggedIn = true;
+var validUsernameChars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890_';
+
+var isLoggedIn = true; // todo: this is wrong
  
 app.get('/', routes.index );
 app.get('/scan', routes.scan);
+app.get('/u/:user', routes.single); 
 app.get('/twitter/timeline', twitter.timeline); 
 app.get('/twitter/timeline/:page', twitter.timeline); 
 app.get('/twitter/connect', twitter.connect); 

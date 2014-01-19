@@ -19,6 +19,12 @@ function consumer() {
    );
 }
 
+exports.user = function(req, res) {
+  var whitelist = require('validator').whitelist;
+  var user = whitelist(req.params.u, validUsernameChars);
+
+  twitter_request("/statuses/user_timeline/" + user + ".json", false);
+}
 
 exports.timeline = function(req, res){
   sys.puts("oauthRequestToken>>"+req.session.oauthRequestToken);
