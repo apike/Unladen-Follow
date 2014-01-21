@@ -53,7 +53,7 @@ var Unladen = {
     oldest_result: null,
     start_time: new Date(),
     current_page: 1,
-    initial_weeks_of_data: null,
+    initial_days_of_data: null,
     single_mode: false,
 
     ///////////////////////////////////////////////////////////////////////////////////////////////////
@@ -119,6 +119,8 @@ var Unladen = {
             error_message = "User is private.";
         } else if (status == 404) {
             error_message = "There is no such user.";
+        } else if (status == 429) {
+            error_message = "You've been rate limited. Try again in 15 minutes.";
         } else if (status == 400) {
             error_message = "Twitter is rate limiting us. (They are likely over capacity.)";
         } else if (status == -1) {
@@ -243,11 +245,11 @@ var Unladen = {
     process_users: function() {
         // How many weeks our oldest result was ago
         var elapsed_milliseconds = new Date().valueOf() - this.parse_twitter_date(this.oldest_result).valueOf();
-        var weeks_of_data = elapsed_milliseconds / 1000 / 60 / 60 / 24 / 7;
+        var days_of_data = elapsed_milliseconds / 1000 / 60 / 60 / 24;
         
-        if (!this.initial_weeks_of_data) {
+        if (!this.initial_days_of_data) {
             // Only store WOD for all-users run
-            this.initial_weeks_of_data = weeks_of_data;
+            this.initial_days_of_data = days_of_data;
         }
         
         var user_array = [];
@@ -271,7 +273,7 @@ var Unladen = {
 
                 // Loop through metrics for this user, and adjust for timespan and weights
                 for (var key in this.METRICS) {
-                    user[key] /= weeks_of_data;
+                    user[key] /= days_of_data;
                     user["score"] += user[key] * this.METRICS[key];
                 }
             }
@@ -280,7 +282,7 @@ var Unladen = {
         }
         
         if (user_array.length == 1) {
-            this.display_single(user_array[0], weeks_of_data);
+            this.display_single(user_array[0], days_of_data);
         } else {
             // Sort by score
             user_array.sort(function(a, b) {
@@ -296,7 +298,7 @@ var Unladen = {
     ///////////////////////////////////////////////////////////////////////////////////////////////////
     
     // Fill single profile with data
-    display_single: function(user, weeks_of_data) {
+    display_single: function(user, days_of_data) {
         $('#tlu').html(this.r10(user["score"]));
         $('#link').attr("href", "");
         
@@ -310,7 +312,7 @@ var Unladen = {
         $("#mentions").html(this.r10(user["mentions"]));
         $("#meta").html(this.r10(user["meta"]));
 
-        $('#weeks').html("Derived from <b>" + this.r10(weeks_of_data) + "</b> weeks of tweets.");
+        $('#weeks').html("Derived from <b>" + this.r10(days_of_data) + "</b> days of tweets.");
         
         $('#' + this.beaufort_scale(user["score"])).addClass("on");
     },
@@ -376,7 +378,7 @@ var Unladen = {
             this.show_all();
         }
         
-        $('#weeks_of_data').html(this.r10(this.initial_weeks_of_data));
+        $('#days_of_data').html(this.r10(this.initial_days_of_data));
         
         this.show_results();
     },

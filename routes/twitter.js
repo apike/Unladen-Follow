@@ -7,14 +7,15 @@ var _twitterConsumerKey = config.TWITTER_CONSUMER_KEY;
 var _twitterConsumerSecret = config.TWITTER_CONSUMER_SECRET;
 console.log("_twitterConsumerKey: %s and _twitterConsumerSecret %s", _twitterConsumerKey, _twitterConsumerSecret);
  
-function consumer() {
+function consumer(next) {
+
   return new oauth.OAuth(
     'https://api.twitter.com/oauth/request_token', 
     'https://api.twitter.com/oauth/access_token', 
      _twitterConsumerKey, 
      _twitterConsumerSecret, 
      "1.0A", 
-     config.HOSTPATH+'/twitter/callback', 
+     config.HOSTPATH+'/twitter/callback?next='+next, 
      "HMAC-SHA1"
    );
 }
@@ -53,7 +54,7 @@ var twitterRequest = function(req, res, path, shouldAuth, extraParams) {
                   req.session.oauthAccessTokenSecret, 
                   function (error, data, response) {  //callback when the data is ready
     if (error) {
-      res.send("Error getting twitter screen name : " + sys.inspect(error), 500);
+      res.send(sys.inspect(error), 500);
     } else {
       //data = JSON.parse(data);
       //req.session.twitterScreenName = data["screen_name"];  
@@ -71,10 +72,11 @@ exports.user = function(req, res) {
 exports.timeline = function(req, res) {
   twitterRequest(req, res, "/statuses/home_timeline", true);
 }
-
  
 exports.connect = function(req, res) {
-  consumer().getOAuthRequestToken(function(error, oauthToken, oauthTokenSecret, results){ //callback with request token
+  var next = req.query.next;
+
+  consumer(next).getOAuthRequestToken(function(error, oauthToken, oauthTokenSecret, results){ //callback with request token
     if (error) {
       res.send("Error getting OAuth request token : " + sys.inspect(error), 500);
     } else { 
@@ -91,6 +93,10 @@ exports.connect = function(req, res) {
  
  
 exports.callback = function(req, res){
+  // Oauth callback from Twitter
+
+  var next = req.query.next;
+
   sys.puts("oauthRequestToken>>"+req.session.oauthRequestToken);
   sys.puts("oauthRequestTokenSecret>>"+req.session.oauthRequestTokenSecret);
   sys.puts("oauth_verifier>>"+req.query.oauth_verifier);
@@ -108,19 +114,12 @@ exports.callback = function(req, res){
     } else {
       req.session.oauthAccessToken = oauthAccessToken;
       req.session.oauthAccessTokenSecret = oauthAccessTokenSecret;
-      consumer().get("https://api.twitter.com/1.1/account/verify_credentials.json", 
-                      req.session.oauthAccessToken, 
-                      req.session.oauthAccessTokenSecret, 
-                      function (error, data, response) {  //callback when the data is ready
-        if (error) {
-          res.send("Error getting twitter screen name : " + sys.inspect(error), 500);
-        } else {
-          data = JSON.parse(data);
-          req.session.twitterScreenName = data["screen_name"];  
-          req.session.twitterLocaltion = data["location"];  
-          res.send('You are signed in with Twitter screenName ' + req.session.twitterScreenName + ' and twitter thinks you are in '+ req.session.twitterLocaltion)
-        }  
-      });  
+
+      if (next) {
+          res.redirect(next);        
+      } else {
+        res.send("Authenticated with Twitter. Have a wonderful day.");
+      }
     }
   });
 };
