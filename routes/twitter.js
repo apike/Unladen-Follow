@@ -54,7 +54,20 @@ var twitterRequest = function(req, res, path, shouldAuth, extraParams) {
                   req.session.oauthAccessTokenSecret, 
                   function (error, data, response) {  //callback when the data is ready
     if (error) {
-      res.send(sys.inspect(error), 500);
+      console.log(sys.inspect(response.headers));
+
+      var ratelimit = response.headers['x-rate-limit-reset'];
+
+      console.log("Rate limit", ratelimit);
+
+      var handoff = {
+        twitter_error: error.statusCode,
+        twitter_ratelimit: ratelimit,
+        twitter_error_response: error
+      };
+
+
+      res.send(handoff, 200);
     } else {
       //data = JSON.parse(data);
       //req.session.twitterScreenName = data["screen_name"];  

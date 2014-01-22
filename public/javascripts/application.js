@@ -17,7 +17,7 @@ var Unladen = {
         "meta": 2
     },
     MAX_RUNTIME: 10000,
-    MAX_PAGES: 8,
+    MAX_PAGES: 2,
     PROGRESS_MESSAGES: [
         "Steeping",
         "Tweeting",
@@ -98,12 +98,14 @@ var Unladen = {
             
             var status = Unladen.process_tweets(json);
             if (status !== true) {
+                console.log('Status not true, error');
                 if (is_simulation) {
                     Unladen.simulate_error(status);
                 } else {
                     Unladen.load_error(status);
                 }
             } else {
+                console.log('Status true, okay');
                 Unladen.process_users();
             }
             $('#simulate_spinner').css('display', 'none');
@@ -135,13 +137,17 @@ var Unladen = {
     
     // Process HTTP error from Twitter for scan
     load_error: function(status) {
-        var error_msg = '';
+        var error_msg = 'Derp.';
         if (status == 401 && this.single_mode) {
             error_msg = "This user's tweets are private.";
         } else if (status == 401) {
             error_msg = "You are not authenticated. <a href='/twitter/connect/'>Please authorize with Twitter here</a>.";
+        } else if (status == 429) {
+            error_msg = "You've been rate limited. Try again in 15 minutes.";
         } else if (status == 400) {
             error_msg = "Twitter is rate limiting us, which shouldn't happen because we're whitelisted. " + this.CONTACT_STRING;
+        } else if (status == 403) {
+            error_msg = "Twitter says you're unauthorized. You'll need to log in again. " + this.CONTACT_STRING;
         } else if (status == -1) {
             error_msg = "No tweets found. If you follow anybody, this means Twitter is having issues.";
         } else {
@@ -168,6 +174,8 @@ var Unladen = {
         $.getJSON("/twitter/timeline/" + this.current_page, {}, function(json) {
             var status = Unladen.process_tweets(json);
 			// 502 means Twitter is overloaded.
+
+            console.log("Status", status);
 			
 			if (status !== true && status != 502) {
                 // Here, we could keep going depending on which error it is.
