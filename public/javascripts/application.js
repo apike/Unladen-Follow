@@ -17,7 +17,7 @@ var Unladen = {
         "meta": 2
     },
     MAX_RUNTIME: 10000,
-    MAX_PAGES: 2,
+    MAX_PAGES: 8,
     PROGRESS_MESSAGES: [
         "Steeping",
         "Tweeting",
