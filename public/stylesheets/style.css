@@ -8,8 +8,9 @@ html, body {
 }
 
 html, body, input {
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 16px;
+    font-family: "chaparral-pro", "Times New Roman", serif;
+    font-weight: 300;
+    font-size: 20px;
 }
 
 h2 {
@@ -48,7 +49,7 @@ a:visited {
 
 #page {
     padding: 60px 0px;
-    max-width: 400px;
+    max-width: 500px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -78,6 +79,10 @@ input.login {
     -webkit-border-radius: 10px;
     border-radius: 10px;
     */
+}
+
+#unladen_logo {
+    width: 374px;
 }
 
 #jumpto {
